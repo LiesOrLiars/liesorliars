@@ -122,6 +122,18 @@
     .youtube-subscribe{display:inline-block;font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);background:var(--blood);border:1px solid var(--blood);padding:.85rem 2.5rem;cursor:pointer;transition:background .15s;text-decoration:none;}
     .youtube-subscribe:hover{background:var(--blood-h);}
     .youtube-meta{display:flex;align-items:center;gap:1rem;margin-bottom:.5rem;flex-wrap:wrap;}
+
+    /* EmailOctopus form overrides */
+    .emailoctopus-form-wrapper{background:transparent !important;}
+    .emailoctopus-form-row input[type=email]{background:var(--black) !important;border:1px solid var(--border-mid) !important;color:var(--ash) !important;font-family:'Crimson Pro',Georgia,serif !important;font-size:1rem !important;padding:.85rem 1.25rem !important;border-radius:0 !important;outline:none !important;}
+    .emailoctopus-form-row input[type=email]:focus{border-color:var(--blood) !important;}
+    .emailoctopus-form-row input[type=email]::placeholder{color:var(--muted) !important;}
+    .emailoctopus-form-row button[type=submit]{background:var(--blood) !important;border:1px solid var(--blood) !important;color:var(--ash) !important;font-family:'Special Elite',monospace !important;font-size:10px !important;letter-spacing:.18em !important;text-transform:uppercase !important;padding:.85rem 1.5rem !important;border-radius:0 !important;cursor:pointer !important;transition:background .15s !important;}
+    .emailoctopus-form-row button[type=submit]:hover{background:var(--blood-h) !important;}
+    .emailoctopus-success-message{color:var(--ash) !important;font-family:'Special Elite',monospace !important;font-size:11px !important;letter-spacing:.2em !important;text-transform:uppercase !important;}
+    .emailoctopus-error-message{color:var(--blood) !important;font-family:'Special Elite',monospace !important;font-size:10px !important;}
+    .emailoctopus-form-wrapper p{color:var(--muted) !important;font-family:'Special Elite',monospace !important;font-size:9px !important;letter-spacing:.15em !important;}
+    .emailoctopus-form-wrapper a{color:var(--muted) !important;}
     @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
     .fade-in{animation:fadeUp .6s ease forwards;}
     @media(max-width:600px){
