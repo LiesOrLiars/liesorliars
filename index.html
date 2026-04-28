@@ -130,6 +130,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .youtube-subscribe:hover{background:var(--blood-h);}
     .youtube-meta{display:flex;align-items:center;gap:1rem;margin-bottom:.5rem;flex-wrap:wrap;}
 
+
+    /* Popup */
+    .popup-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:10000;display:none;align-items:center;justify-content:center;padding:1.5rem;}
+    .popup-overlay.active{display:flex;}
+    .popup-box{background:var(--surface);border:1px solid var(--blood);max-width:480px;width:100%;padding:3rem 2.5rem;position:relative;animation:fadeUp .4s ease;}
+    .popup-close{position:absolute;top:1rem;right:1.25rem;background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer;font-family:'Special Elite',monospace;letter-spacing:.1em;transition:color .15s;}
+    .popup-close:hover{color:var(--blood);}
+    .popup-label{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--blood);margin-bottom:.75rem;}
+    .popup-title{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:.06em;color:var(--ash);line-height:1;margin-bottom:.75rem;}
+    .popup-sub{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:1rem;color:var(--ash-dim);margin-bottom:2rem;line-height:1.6;}
+    .popup-form{display:flex;gap:0;width:100%;}
+    .popup-input{flex:1;background:var(--black);border:1px solid var(--border-mid);border-right:none;color:var(--ash);font-family:'Crimson Pro',Georgia,serif;font-size:1rem;padding:.75rem 1rem;outline:none;transition:border-color .15s;}
+    .popup-input:focus{border-color:var(--blood);}
+    .popup-input::placeholder{color:var(--muted);}
+    .popup-btn{background:var(--blood);border:1px solid var(--blood);color:var(--ash);font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 1.25rem;cursor:pointer;white-space:nowrap;transition:background .15s;}
+    .popup-btn:hover{background:var(--blood-h);}
+    .popup-success{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blood);text-align:center;padding:1rem 0;}
+    @media(max-width:480px){.popup-box{padding:2rem 1.5rem;}.popup-form{flex-direction:column;}.popup-input{border-right:1px solid var(--border-mid);border-bottom:none;}.popup-title{font-size:2rem;}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
     .fade-in{animation:fadeUp .6s ease forwards;}
     @media(max-width:600px){
@@ -513,5 +531,55 @@ function scrollToArchive(){showHome();setTimeout(()=>{const e=document.getElemen
 function scrollToAbout(){showHome();setTimeout(()=>{const e=document.getElementById('about');if(e)e.scrollIntoView({behavior:'smooth'});},100);}
 function scrollToNewsletter(){showHome();setTimeout(()=>{const e=document.getElementById('newsletter');if(e)e.scrollIntoView({behavior:'smooth'});},100);}
 </script>
+
+<!-- EMAIL POPUP -->
+<div class="popup-overlay" id="emailPopup">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()">✕ Close</button>
+    <div class="popup-label">The Archive</div>
+    <div class="popup-title">Stay In The Archive</div>
+    <p class="popup-sub">The cases they buried. The documents they ignored. In your inbox.</p>
+    <div class="popup-form">
+      <input class="popup-input" type="email" id="popupEmail" placeholder="your@email.com" />
+      <button class="popup-btn" onclick="submitPopup()">Open The File</button>
+    </div>
+    <div class="popup-success" id="popupSuccess" style="display:none;">You're in the archive.</div>
+  </div>
+</div>
+
+<script>
+function showPopup(){
+  const last = localStorage.getItem('lol_popup');
+  const now = Date.now();
+  if(last && now - parseInt(last) < 7 * 24 * 60 * 60 * 1000) return;
+  document.getElementById('emailPopup').classList.add('active');
+}
+
+function closePopup(){
+  document.getElementById('emailPopup').classList.remove('active');
+  localStorage.setItem('lol_popup', Date.now().toString());
+}
+
+function submitPopup(){
+  const email = document.getElementById('popupEmail').value;
+  if(!email || !email.includes('@')) return;
+  // Redirect to Beehiiv signup with email prefilled
+  window.open('https://liesorliars.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
+  document.getElementById('popupSuccess').style.display = 'block';
+  document.getElementById('popupEmail').style.display = 'none';
+  document.querySelector('.popup-btn').style.display = 'none';
+  localStorage.setItem('lol_popup', Date.now().toString());
+  setTimeout(closePopup, 3000);
+}
+
+// Close on overlay click
+document.getElementById('emailPopup').addEventListener('click', function(e){
+  if(e.target === this) closePopup();
+});
+
+// Trigger after 30 seconds
+setTimeout(showPopup, 30000);
+</script>
+
 </body>
 </html>
