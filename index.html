@@ -140,14 +140,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .popup-label{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--blood);margin-bottom:.75rem;}
     .popup-title{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:.06em;color:var(--ash);line-height:1;margin-bottom:.75rem;}
     .popup-sub{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:1rem;color:var(--ash-dim);margin-bottom:2rem;line-height:1.6;}
-    .popup-form{display:flex;gap:0;width:100%;}
-    .popup-input{flex:1;background:var(--black);border:1px solid var(--border-mid);border-right:none;color:var(--ash);font-family:'Crimson Pro',Georgia,serif;font-size:1rem;padding:.75rem 1rem;outline:none;transition:border-color .15s;}
-    .popup-input:focus{border-color:var(--blood);}
-    .popup-input::placeholder{color:var(--muted);}
-    .popup-btn{background:var(--blood);border:1px solid var(--blood);color:var(--ash);font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:.75rem 1.25rem;cursor:pointer;white-space:nowrap;transition:background .15s;}
-    .popup-btn:hover{background:var(--blood-h);}
-    .popup-success{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blood);text-align:center;padding:1rem 0;}
-    @media(max-width:480px){.popup-box{padding:2rem 1.5rem;}.popup-form{flex-direction:column;}.popup-input{border-right:1px solid var(--border-mid);border-bottom:none;}.popup-title{font-size:2rem;}}
+    @media(max-width:480px){.popup-box{padding:2rem 1.5rem;}.popup-title{font-size:2rem;}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
     .fade-in{animation:fadeUp .6s ease forwards;}
     @media(max-width:600px){
@@ -539,11 +532,10 @@ function scrollToNewsletter(){showHome();setTimeout(()=>{const e=document.getEle
     <div class="popup-label">The Archive</div>
     <div class="popup-title">Stay In The Archive</div>
     <p class="popup-sub">The cases they buried. The documents they ignored. In your inbox.</p>
-    <div class="popup-form">
-      <input class="popup-input" type="email" id="popupEmail" placeholder="your@email.com" />
-      <button class="popup-btn" onclick="submitPopup()">Open The File</button>
+    <div style="margin-top:1rem;">
+      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+      <iframe src="https://subscribe-forms.beehiiv.com/039687b2-9137-43a9-af13-2106dcbf7886" class="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:100px;border:none;background:transparent;"></iframe>
     </div>
-    <div class="popup-success" id="popupSuccess" style="display:none;">You're in the archive.</div>
   </div>
 </div>
 
