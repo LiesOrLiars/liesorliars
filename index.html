@@ -51,6 +51,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--blood),transparent);}
     .hero-scroll-label{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.25em;color:var(--muted);text-transform:uppercase;}
     .archive-wrap{padding:6rem 2rem;max-width:900px;margin:0 auto;}
+    .featured-wrap{padding:3.25rem 2rem 2.5rem;max-width:900px;margin:0 auto;width:100%;}
+    .featured-wrap .section-label{margin-bottom:1.25rem;}
+    .featured-entry{cursor:pointer;}
+    .featured-entry::before{height:100%;}
     .section-label{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--blood);margin-bottom:.5rem;}
     .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:.06em;color:var(--ash);line-height:1;margin-bottom:.5rem;}
     .section-sub{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:1rem;color:var(--ash-dim);margin-bottom:2rem;}
@@ -66,8 +70,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .entry-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem);letter-spacing:.04em;color:var(--ash);line-height:1.1;margin-bottom:.4rem;transition:color .15s;}
     .archive-entry:hover .entry-title{color:#ddd8d0;}
     .entry-hook{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:.95rem;color:var(--ash-dim);line-height:1.5;}
-    .entry-action{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;padding-top:.2rem;min-width:115px;}
-    .entry-btn{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);background:transparent;border:1px solid var(--blood);padding:.5rem 1rem;cursor:pointer;white-space:nowrap;transition:background .15s;}
+    .entry-action{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;padding-top:.2rem;min-width:170px;}
+    .entry-btn{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);background:transparent;border:1px solid var(--blood);padding:.7rem 1.15rem;min-height:44px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;white-space:nowrap;transition:background .15s;}
     .entry-btn:hover{background:var(--blood);}
     .entry-ref{font-family:'Special Elite',monospace;font-size:8px;letter-spacing:.1em;color:#2a2a2a;text-transform:uppercase;}
     .archive-footer{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
@@ -151,6 +155,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       nav{padding:1rem 1.25rem;}.nav-links{gap:1.25rem;}
       .hero{padding:7rem 1.25rem 4rem;}.hero-stamp{flex-direction:column;gap:.25rem;align-items:center;}
       .archive-wrap,.about-wrap{padding:4rem 1.25rem;}
+      .featured-wrap{padding:2.25rem 1.25rem;}
       .archive-entry{grid-template-columns:1fr;gap:1rem;}.archive-entry::before{display:none;}
       .entry-action{flex-direction:row;align-items:center;justify-content:space-between;min-width:unset;}
       .newsletter-form{flex-direction:column;}.newsletter-input{border-right:1px solid var(--border-mid);border-bottom:none;}
@@ -195,6 +200,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <hr class="red-rule" />
+
+  <div class="featured-wrap" id="featured">
+    <div class="section-label">— Current Cover-Up File —</div>
+    <div class="archive-list">
+      <div class="archive-entry featured-entry" onclick="showArticle('sangcom')">
+        <div><div class="entry-meta"><span class="entry-num">Case File: 016</span><span class="entry-cat">Government &amp; Corruption</span></div>
+        <div class="entry-title">The UK Government Knew About the Bribes</div>
+        <div class="entry-hook">GPT pleaded guilty to corruption on the SANGCOM contracts. Two men were later cleared after the jury heard evidence that Britain had authorised the arrangements.</div></div>
+        <div class="entry-action"><button class="entry-btn" onclick="showArticle('sangcom')">Read The File →</button><span class="entry-ref">Ref: LOL-016-ARCH</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="newsletter-section" id="newsletter">
+    <h2 class="newsletter-title">Join The Archives</h2>
+    <p class="newsletter-sub">US government corruption</p>
+    <p class="newsletter-hook">The FBI approved 2370 covert actions against Americans.</p>
+    <p class="newsletter-body">The truth they do not put on a press release. It is not on the site. It is not on X. It is the first file on this list.</p>
+    <div style="width:100%;max-width:580px;margin:0 auto;padding:0 1rem;"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
+    <p class="newsletter-note">Unsubscribe at any time</p>
+  </section>
 
   <div class="archive-wrap" id="archive">
     <div class="section-label">— Case Files —</div>
@@ -370,17 +396,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </div>
-
-  <hr class="red-rule" />
-
-  <section class="newsletter-section" id="newsletter">
-    <h2 class="newsletter-title">Join The Archives</h2>
-    <p class="newsletter-sub">US government corruption</p>
-    <p class="newsletter-hook">The FBI approved 2370 covert actions against Americans.</p>
-    <p class="newsletter-body">The truth they do not put on a press release. It is not on the site. It is not on X. It is the first file on this list.</p>
-    <div style="width:100%;max-width:580px;margin:0 auto;padding:0 1rem;"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
-    <p class="newsletter-note">Unsubscribe at any time</p>
-  </section>
 
   <footer>
     <div class="footer-inner">
