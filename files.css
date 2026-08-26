@@ -55,7 +55,22 @@ footer{background:var(--black);border-top:2px solid var(--blood);padding:4rem 2r
 .file-index a{display:block;padding:.85rem 0;font-family:'Crimson Pro',Georgia,serif;color:var(--ash);transition:color .15s;}
 .file-index a:hover{color:var(--blood);}
 .file-index .idx-num{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--blood);margin-right:.6rem;}
+.hub-wrap{max-width:900px;margin:0 auto;padding:4rem 2rem 6rem;}
+.hub-intro{font-family:'Crimson Pro',Georgia,serif;font-size:1.1rem;line-height:1.8;color:var(--ash);margin:0 0 2.5rem;}
+.hub-intro p{margin:0 0 1.1rem;}
+.archive-list{display:flex;flex-direction:column;}
+.archive-entry{border-top:1px solid var(--border);padding:1.75rem 0;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start;position:relative;}
+.archive-entry:last-child{border-bottom:1px solid var(--border);}
+.entry-meta{display:flex;align-items:center;gap:.75rem;margin-bottom:.4rem;flex-wrap:wrap;}
+.entry-num{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.25em;color:var(--blood);text-transform:uppercase;}
+.entry-cat{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;border:1px solid var(--border);padding:.1rem .5rem;}
+.entry-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem);letter-spacing:.04em;color:var(--ash);line-height:1.1;margin-bottom:.4rem;display:inline-block;}
+.entry-title:hover{color:var(--blood);}
+.entry-hook{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:.95rem;color:var(--ash-dim);line-height:1.5;}
+.entry-action{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;padding-top:.2rem;min-width:170px;}
 @media(max-width:600px){
   .site-nav{padding:1rem 1.25rem;}.nav-links{gap:1.25rem;}
-  .article-wrap{padding:3rem 1.25rem 5rem;}
+  .article-wrap,.hub-wrap{padding:3rem 1.25rem 5rem;}
+  .archive-entry{grid-template-columns:1fr;gap:1rem;}
+  .entry-action{flex-direction:row;align-items:center;justify-content:space-between;min-width:unset;}
 }

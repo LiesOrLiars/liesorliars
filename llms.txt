@@ -6,6 +6,11 @@ Lies or Liars is an archive of case files built from primary documents: court re
 
 Citable file pages are at /files/{id}.html. The homepage at https://liesorliars.com/ lists the archive.
 
+## Topics
+
+- [Government corruption case files](https://liesorliars.com/files/corruption.html)
+- [True crime case files](https://liesorliars.com/files/true-crime.html)
+
 ## Case files
 
 - [The Epstein Files: How the System Protected a Predator](https://liesorliars.com/files/epstein.html): Case File: 001. Federal prosecutors had a 53-page indictment, 30 victims, and overwhelming evidence. They gave him 18 months in county jail with work release.
