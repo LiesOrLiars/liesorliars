@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://liesorliars.com/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://liesorliars.com/files/corruption.html</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -93,6 +93,11 @@
   <url>
     <loc>https://liesorliars.com/files/sangcom.html</loc>
     <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://liesorliars.com/files/infectedBlood.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
