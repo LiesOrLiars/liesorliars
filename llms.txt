@@ -6,6 +6,10 @@ Lies or Liars is an archive of case files built from primary documents: court re
 
 Citable file pages are at /files/{id}.html. The homepage at https://liesorliars.com/ lists the archive.
 
+## Arcade
+
+- [Arrest the Epstein List](https://liesorliars.com/arrest.html): Archive arcade — guide the agent, collect the list. Cold documentary Snake for Lies or Liars.
+
 ## Topics
 
 - [Government corruption case files](https://liesorliars.com/files/corruption.html)
