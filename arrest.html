@@ -231,7 +231,19 @@
     { id: 'dubin', name: 'GLENN DUBIN', tag: 'DUBIN' },
     { id: 'pritzker', name: 'TOM PRITZKER', tag: 'PRITZKER' },
     { id: 'kevinSpacey', name: 'KEVIN SPACEY', tag: 'SPACEY' },
-    { id: 'chrisTucker', name: 'CHRIS TUCKER', tag: 'TUCKER' }
+    { id: 'chrisTucker', name: 'CHRIS TUCKER', tag: 'TUCKER' },
+    { id: 'trump', name: 'DONALD TRUMP', tag: 'TRUMP' },
+    { id: 'summers', name: 'LARRY SUMMERS', tag: 'SUMMERS' },
+    { id: 'bannon', name: 'STEVE BANNON', tag: 'BANNON' },
+    { id: 'richardson', name: 'BILL RICHARDSON', tag: 'RICHARDS' },
+    { id: 'mitchell', name: 'GEORGE MITCHELL', tag: 'MITCHELL' },
+    { id: 'brunel', name: 'JEAN-LUC BRUNEL', tag: 'BRUNEL' },
+    { id: 'minsky', name: 'MARVIN MINSKY', tag: 'MINSKY' },
+    { id: 'kellen', name: 'SARAH KELLEN', tag: 'KELLEN' },
+    { id: 'marcinkova', name: 'NADIA MARCINKOVA', tag: 'NADIA' },
+    { id: 'alessi', name: 'ALFREDO ALESSI', tag: 'ALESSI' },
+    { id: 'copperfield', name: 'DAVID COPPERFIELD', tag: 'COPPER' },
+    { id: 'acosta', name: 'ALEX ACOSTA', tag: 'ACOSTA' }
   ];
 
   function personById(id) {
@@ -585,6 +597,134 @@
       drawEyes(cx, cy);
       px(cx, cy, 4, 6, 4, 2, skin);
       drawMouth(cx, cy, '#6a4030');
+    } else if (id === 'trump') {
+      skin = '#d8a05a';
+      hair = '#e8c848';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 2, hair);
+      px(cx, cy, 2, 2, 1, 2, hair);
+      px(cx, cy, 8, 2, 2, 2, hair);
+      px(cx, cy, 4, 1, 5, 1, '#f0d060');
+      px(cx, cy, 5, 1, 3, 1, skin);
+      drawEyes(cx, cy);
+      px(cx, cy, 5, 5, 2, 1, '#c88850');
+      drawMouth(cx, cy, '#8a5040', true);
+    } else if (id === 'summers') {
+      skin = '#c8b090';
+      hair = '#a8a8a8';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 1, skin);
+      px(cx, cy, 2, 2, 2, 3, hair);
+      px(cx, cy, 8, 2, 2, 3, hair);
+      drawEyes(cx, cy);
+      drawGlasses(cx, cy, '#333');
+      drawMouth(cx, cy);
+    } else if (id === 'bannon') {
+      skin = '#c4a882';
+      hair = '#9a9a9a';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 2, 1, 8, 3, hair);
+      px(cx, cy, 2, 2, 1, 4, hair);
+      px(cx, cy, 9, 2, 1, 4, hair);
+      px(cx, cy, 3, 1, 2, 1, '#b8b8b8');
+      drawEyes(cx, cy);
+      px(cx, cy, 4, 6, 4, 2, '#8a7060');
+      drawMouth(cx, cy, '#5a4030');
+    } else if (id === 'richardson') {
+      skin = '#c8a070';
+      hair = '#b0b0b0';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 2, hair);
+      px(cx, cy, 2, 2, 1, 2, hair);
+      px(cx, cy, 9, 2, 1, 2, hair);
+      px(cx, cy, 3, 5, 6, 3, skin);
+      drawEyes(cx, cy);
+      drawMouth(cx, cy, '#7a5040', true);
+    } else if (id === 'mitchell') {
+      skin = '#c8b090';
+      hair = '#e0e0e0';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 2, hair);
+      px(cx, cy, 2, 2, 1, 2, hair);
+      px(cx, cy, 9, 2, 1, 2, hair);
+      drawEyes(cx, cy);
+      drawGlasses(cx, cy, '#444');
+      drawMouth(cx, cy);
+    } else if (id === 'brunel') {
+      skin = '#c09060';
+      hair = '#2a1810';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 2, hair);
+      px(cx, cy, 2, 2, 1, 3, hair);
+      px(cx, cy, 9, 2, 1, 3, hair);
+      px(cx, cy, 4, 1, 4, 1, '#1a1008');
+      drawEyes(cx, cy);
+      px(cx, cy, 5, 5, 2, 1, '#a07048');
+      drawMouth(cx, cy, '#6a4030');
+    } else if (id === 'minsky') {
+      skin = '#c8b090';
+      hair = '#d0d0d0';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 1, skin);
+      px(cx, cy, 2, 2, 2, 2, hair);
+      px(cx, cy, 8, 2, 2, 2, hair);
+      drawEyes(cx, cy);
+      drawGlasses(cx, cy, '#222');
+      drawMouth(cx, cy);
+    } else if (id === 'kellen') {
+      skin = '#d0b090';
+      hair = '#d4b060';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 2, 1, 8, 2, hair);
+      px(cx, cy, 2, 3, 2, 5, hair);
+      px(cx, cy, 8, 3, 2, 5, hair);
+      px(cx, cy, 3, 1, 6, 1, '#e0c070');
+      drawEyes(cx, cy);
+      px(cx, cy, 5, 6, 2, 1, '#c09088');
+      drawMouth(cx, cy, '#8a4050');
+    } else if (id === 'marcinkova') {
+      skin = '#d4b898';
+      hair = '#e8d080';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 2, hair);
+      px(cx, cy, 2, 2, 2, 4, hair);
+      px(cx, cy, 8, 2, 2, 4, hair);
+      px(cx, cy, 4, 1, 4, 1, '#f0e0a0');
+      drawEyes(cx, cy);
+      px(cx, cy, 5, 6, 2, 1, '#c89890');
+      drawMouth(cx, cy, '#a05060');
+    } else if (id === 'alessi') {
+      skin = '#b89068';
+      hair = '#1a120c';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 2, hair);
+      px(cx, cy, 2, 2, 1, 3, hair);
+      px(cx, cy, 9, 2, 1, 3, hair);
+      drawEyes(cx, cy);
+      px(cx, cy, 4, 6, 4, 1, '#8a6850');
+      drawMouth(cx, cy);
+    } else if (id === 'copperfield') {
+      skin = '#c4a070';
+      hair = '#1c1410';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 2, hair);
+      px(cx, cy, 4, 1, 1, 1, skin);
+      px(cx, cy, 7, 1, 1, 1, skin);
+      px(cx, cy, 2, 2, 1, 2, hair);
+      px(cx, cy, 9, 2, 1, 2, hair);
+      drawEyes(cx, cy);
+      px(cx, cy, 5, 6, 2, 2, '#3a2a20');
+      drawMouth(cx, cy, '#6a4030');
+    } else if (id === 'acosta') {
+      skin = '#b88858';
+      hair = '#2a2018';
+      drawFaceBase(cx, cy, skin);
+      px(cx, cy, 3, 1, 6, 2, hair);
+      px(cx, cy, 2, 2, 1, 2, hair);
+      px(cx, cy, 9, 2, 1, 2, hair);
+      drawEyes(cx, cy);
+      drawGlasses(cx, cy, '#1a1a1a');
+      drawMouth(cx, cy);
     } else {
       drawFaceBase(cx, cy, skin);
       px(cx, cy, 3, 1, 6, 2, hair);
