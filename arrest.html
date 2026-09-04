@@ -251,8 +251,8 @@
   }
 
   function pickUnusedPersonId() {
-    var pool = [];
     var used = idsOnBoard();
+    var pool = [];
     for (var i = 0; i < PEOPLE.length; i++) {
       if (!used[PEOPLE[i].id]) pool.push(PEOPLE[i].id);
     }
