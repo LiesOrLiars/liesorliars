@@ -224,7 +224,7 @@
     { id: 'maxwell', name: 'GHISLAINE MAXWELL', tag: 'MAXWELL' },
     { id: 'andrew', name: 'PRINCE ANDREW', tag: 'ANDREW' },
     { id: 'clinton', name: 'BILL CLINTON', tag: 'CLINTON' },
-    { id: 'dershowitz', name: 'ALAN DERSHOWITZ', tag: 'DERSHO' },
+    { id: 'dershowitz', name: 'ALAN DERSHOWITZ', tag: 'DERSHOWITZ' },
     { id: 'gates', name: 'BILL GATES', tag: 'GATES' },
     { id: 'barak', name: 'EHUD BARAK', tag: 'BARAK' },
     { id: 'wexner', name: 'LES WEXNER', tag: 'WEXNER' },
@@ -251,8 +251,8 @@
   }
 
   function pickUnusedPersonId() {
-    var pool = [];
     var used = idsOnBoard();
+    var pool = [];
     for (var i = 0; i < PEOPLE.length; i++) {
       if (!used[PEOPLE[i].id]) pool.push(PEOPLE[i].id);
     }
@@ -593,28 +593,32 @@
     }
   }
 
-  function drawNameTag(cx, cy, tag) {
+  function drawNameTag(cx, cy, tag, emphasize) {
     var x = cx * CELL;
     var y = cy * CELL;
-    ctx.fillStyle = 'rgba(0,0,0,0.82)';
-    ctx.fillRect(x + 1, y + CELL - 7, CELL - 2, 6);
-    ctx.fillStyle = '#f0f0f0';
+    var barH = emphasize ? 12 : 10;
+    var fontPx = emphasize ? 10 : 9;
+    var pad = emphasize ? 4 : 2;
+    ctx.font = 'bold ' + fontPx + 'px "IBM Plex Mono", "Courier New", monospace';
+    var tw = ctx.measureText(tag).width;
+    var bw = Math.max(CELL - 2, Math.ceil(tw + pad * 2));
+    var bx = x + (CELL - bw) / 2;
+    var by = y + CELL - barH;
+    ctx.fillStyle = 'rgba(0,0,0,0.92)';
+    ctx.fillRect(bx, by, bw, barH);
+    ctx.strokeStyle = COLORS.red;
+    ctx.lineWidth = 1;
+    ctx.strokeRect(bx + 0.5, by + 0.5, bw - 1, barH - 1);
+    ctx.fillStyle = '#ffffff';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.font = '6px "IBM Plex Mono", "Courier New", monospace';
-    var maxW = CELL - 3;
-    if (ctx.measureText(tag).width > maxW) {
-      ctx.font = '5px "IBM Plex Mono", "Courier New", monospace';
-    }
-    if (ctx.measureText(tag).width > maxW) {
-      ctx.font = '4px "IBM Plex Mono", "Courier New", monospace';
-    }
-    ctx.fillText(tag, x + CELL / 2, y + CELL - 4);
+    ctx.font = 'bold ' + fontPx + 'px "IBM Plex Mono", "Courier New", monospace';
+    ctx.fillText(tag, x + CELL / 2, by + barH / 2 + 0.5);
   }
 
-  function drawCollectible(cx, cy, personId) {
+  function drawCollectible(cx, cy, personId, emphasize) {
     drawPersonFace(cx, cy, personId);
-    drawNameTag(cx, cy, personById(personId).tag);
+    drawNameTag(cx, cy, personById(personId).tag, !!emphasize);
   }
 
   function drawGrid() {
@@ -675,7 +679,7 @@
     if (target) {
       ctx.fillStyle = pulseRgba();
       ctx.fillRect(target.x * CELL + 2, target.y * CELL + 2, CELL - 4, CELL - 4);
-      drawCollectible(target.x, target.y, target.personId);
+      drawCollectible(target.x, target.y, target.personId, true);
     }
 
     for (var i = snake.length - 1; i >= 1; i--) {
