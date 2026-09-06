@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://liesorliars.com/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -104,6 +104,11 @@
   <url>
     <loc>https://liesorliars.com/files/infectedBlood.html</loc>
     <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://liesorliars.com/files/tuskegee.html</loc>
+    <lastmod>2026-09-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
