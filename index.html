@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WGWZNF5K');</script>
-<!-- End Google Tag Manager -->
+<!-- Google Tag Manager loads from consent.js after Accept -->
+<script src="/consent.js" defer></script>
 <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,9 +20,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Lies or Liars — Government corruption and true crime case files" />
   <meta name="twitter:description" content="Government corruption and true crime case files from primary documents. What the document says is what we report." />
-  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://eocampaign1.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -40,13 +39,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     body{background:var(--black);color:var(--ash);font-family:'Crimson Pro',Georgia,serif;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
     body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;opacity:.032;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px;}
     a{color:inherit;text-decoration:none;}p{margin:0;}
+    .skip-link{position:absolute;left:1rem;top:-4.5rem;z-index:1000;background:var(--blood);color:var(--ash);font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:.7rem 1.15rem;}
+    .skip-link:focus,.skip-link:focus-visible{top:1rem;}
+    :focus-visible{outline:2px solid var(--blood);outline-offset:3px;}
     .red-rule{width:100%;height:1px;background:var(--blood);border:none;margin:0;}
     .red-rule-thick{width:100%;height:2px;background:var(--blood);border:none;margin:0;}
     nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,8,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
     .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.1em;color:var(--ash);cursor:pointer;display:flex;align-items:center;gap:.75rem;}
     .nav-logo-img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid var(--border-mid);}
     .hero-logo{width:90px;height:90px;border-radius:50%;object-fit:cover;border:2px solid var(--blood);margin-bottom:1.5rem;display:block;}
-    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
     .nav-links a{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash-dim);transition:color .15s;cursor:pointer;}
     .nav-links a:hover{color:var(--blood);}
     .page{display:none;min-height:100vh;}
@@ -335,27 +337,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGWZNF5K"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
+<a class="skip-link" href="#main">Skip to content</a>
 <nav>
-  <div class="nav-logo" onclick="showHome()"><img src="logo.jpg" alt="Lies or Liars" class="nav-logo-img" /></div>
+  <a class="nav-logo" href="/" onclick="showHome();return false;"><img src="logo.jpg" alt="Lies or Liars" class="nav-logo-img" width="32" height="32" /></a>
   <ul class="nav-links">
-    <li><a onclick="showHome()">Home</a></li>
-    <li><a onclick="scrollToArchive()">Archive</a></li>
-    <li><a onclick="scrollToEpisodes()">Watch</a></li>
-    <li><a onclick="scrollToAbout()">About</a></li>
-    <li><a onclick="scrollToNewsletter()">Newsletter</a></li>
+    <li><a href="/" onclick="showHome();return false;">Home</a></li>
+    <li><a href="#archive" onclick="scrollToArchive();return false;">Archive</a></li>
+    <li><a href="#episodes" onclick="scrollToEpisodes();return false;">Watch</a></li>
+    <li><a href="#about" onclick="scrollToAbout();return false;">About</a></li>
+    <li><a href="#newsletter" onclick="scrollToNewsletter();return false;">Newsletter</a></li>
     <li><a href="/arrest.html">Arcade</a></li>
+    <li><a href="/faq.html">FAQ</a></li>
   </ul>
 </nav>
 
 <!-- HOME PAGE -->
 <div id="page-home" class="page active">
-  <section class="hero">
-    <img src="logo.jpg" alt="Lies or Liars" class="hero-logo" />
+  <section class="hero" id="main">
+    <img src="logo.jpg" alt="Lies or Liars" class="hero-logo" width="90" height="90" />
     <div class="hero-stamp">
       <span>Est. MMXXIV. In The Archives.</span>
       <span>Sourced. Documented. Cold truth.</span>
@@ -390,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="newsletter-sub">US government corruption</p>
     <p class="newsletter-hook">The FBI approved 2370 covert actions against Americans.</p>
     <p class="newsletter-body">The truth they do not put on a press release. It is not on the site. It is not on X. It is the first file on this list.</p>
-    <div style="width:100%;max-width:580px;margin:0 auto;padding:0 1rem;"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
+    <div style="width:100%;max-width:580px;margin:0 auto;padding:0 1rem;" role="region" aria-label="Newsletter signup"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
     <p class="newsletter-note">Add this archive as a preferred source in Google Search.</p>
     <div class="preferred-source-slot"><div google-add-preferred-source-btn data-theme="dark" data-lang="en"></div></div>
     <p class="newsletter-note">Unsubscribe at any time</p>
@@ -552,6 +551,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <iframe
         src="https://www.youtube-nocookie.com/embed/RnZ5G-5AUfo"
         title="The Disappearance Of Brianna Maitland — Lies or Liars"
+        loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
@@ -594,10 +594,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-top">
         <div><div class="footer-brand-name">Lies or Liars</div><div class="footer-brand-tag">In The Archives</div></div>
         <ul class="footer-nav">
-          <li><a onclick="scrollToArchive()">Archive</a></li>
-          <li><a onclick="scrollToAbout()">About</a></li>
-          <li><a onclick="scrollToNewsletter()">Newsletter</a></li>
+          <li><a href="#archive" onclick="scrollToArchive();return false;">Archive</a></li>
+          <li><a href="#about" onclick="scrollToAbout();return false;">About</a></li>
+          <li><a href="#newsletter" onclick="scrollToNewsletter();return false;">Newsletter</a></li>
           <li><a href="/arrest.html">Arcade</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
         </ul>
       </div>
       <hr class="red-rule" />
@@ -631,14 +634,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="article-newsletter-title">Stay In The Archive</div>
       <p class="article-newsletter-hook">The FBI approved 2370 covert actions against Americans.</p>
       <p class="article-newsletter-body">The next corruption file does not go on the site. It goes here.</p>
-      <div style="width:100%;max-width:580px;margin:0 auto;padding:0 1rem;"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
+      <div style="width:100%;max-width:580px;margin:0 auto;padding:0 1rem;" role="region" aria-label="Newsletter signup"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
     </div>
   </div>
   <footer>
     <div class="footer-inner">
       <div class="footer-top">
         <div><div class="footer-brand-name">Lies or Liars</div><div class="footer-brand-tag">In The Archives</div></div>
-        <ul class="footer-nav"><li><a onclick="showHome()">Home</a></li><li><a onclick="showHome();setTimeout(scrollToArchive,300)">Archive</a></li><li><a href="/arrest.html">Arcade</a></li></ul>
+        <ul class="footer-nav"><li><a href="/" onclick="showHome();return false;">Home</a></li><li><a href="#archive" onclick="showHome();setTimeout(scrollToArchive,300);return false;">Archive</a></li><li><a href="/arrest.html">Arcade</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li></ul>
       </div>
       <hr class="red-rule" />
       <div class="footer-bottom">
@@ -892,11 +895,11 @@ function scrollToNewsletter(){showHome();setTimeout(()=>{const e=document.getEle
 <!-- EMAIL POPUP -->
 <div class="popup-overlay" id="emailPopup">
   <div class="popup-box">
-    <button class="popup-close" onclick="closePopup()">✕ Close</button>
+    <button type="button" class="popup-close" onclick="closePopup()">✕ Close</button>
     <div class="popup-label">The Archive</div>
     <div class="popup-title">Stay In The Archive</div>
     <p class="popup-sub">The FBI approved 2370 covert actions against Americans. They ran it in secret. The Senate put it in the record. That file is not on the site. It is not on X. It is the first file on this list.</p>
-    <div style="margin-top:1rem;" id="popupEoForm">
+    <div style="margin-top:1rem;" id="popupEoForm" role="region" aria-label="Newsletter signup">
       <script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script>
     </div>
   </div>
