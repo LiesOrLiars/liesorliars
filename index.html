@@ -60,8 +60,9 @@
     .hero-title span{color:var(--blood);}
     .hero-tagline{font-family:'Special Elite',monospace;font-size:clamp(.9rem,2.5vw,1.3rem);letter-spacing:.4em;text-transform:uppercase;color:var(--ash);margin:1.5rem 0 1rem;}
     .hero-sub{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:clamp(.9rem,1.6vw,1.1rem);color:var(--ash-dim);max-width:520px;margin:0 auto 2.5rem;line-height:1.8;}
+    .hero-ctas{display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center;}
     .hero-cta{display:inline-block;font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);border:1px solid var(--blood);padding:.85rem 2.5rem;cursor:pointer;transition:background .15s;background:transparent;}
-    .hero-cta:hover{background:var(--blood);}
+    .hero-cta:hover{background:var(--blood);}a.hero-cta{color:var(--ash);}
     .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;}
     .hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--blood),transparent);}
     .hero-scroll-label{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.25em;color:var(--muted);text-transform:uppercase;}
@@ -363,7 +364,10 @@
     <hr class="red-rule-thick" style="max-width:900px;width:100%;" />
     <div class="hero-tagline">In The Archives</div>
     <p class="hero-sub">Every investigation starts with the official record.<br>What the document says is what we report.</p>
-    <button class="hero-cta" onclick="scrollToArchive()">Open The Archives</button>
+    <div class="hero-ctas">
+      <button type="button" class="hero-cta" onclick="scrollToArchive()">Open The Archives</button>
+      <a class="hero-cta" href="#newsletter" onclick="scrollToNewsletter();return false;">Join The Archives</a>
+    </div>
     <div class="hero-scroll">
       <div class="hero-scroll-line"></div>
       <span class="hero-scroll-label">Scroll</span>
