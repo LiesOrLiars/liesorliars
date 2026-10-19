@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <!-- Google Tag Manager loads from consent.js after Accept -->
 <script src="/consent.js" defer></script>
 <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
@@ -27,162 +28,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://www.googletagmanager.com" />
   <link rel="preconnect" href="https://eocampaign1.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --black:#080808;--surface:#141414;--border:#222;--border-mid:#2e2e2e;
-      --blood:#7a1212;--blood-h:#9b1a1a;--ash:#c8c2b8;--ash-dim:#b8b0a8;--muted:#9a9490;
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
-    ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--black);}::-webkit-scrollbar-thumb{background:var(--blood);}
-    body{background:var(--black);color:var(--ash);font-family:'Crimson Pro',Georgia,serif;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
-    body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;opacity:.032;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px;}
-    a{color:inherit;text-decoration:none;}p{margin:0;}
-    .skip-link{position:absolute;left:1rem;top:-4.5rem;z-index:1000;background:var(--blood);color:var(--ash);font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:.7rem 1.15rem;}
-    .skip-link:focus,.skip-link:focus-visible{top:1rem;}
-    :focus-visible{outline:2px solid var(--blood);outline-offset:3px;}
-    .red-rule{width:100%;height:1px;background:var(--blood);border:none;margin:0;}
-    .red-rule-thick{width:100%;height:2px;background:var(--blood);border:none;margin:0;}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,8,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
-    .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.1em;color:var(--ash);cursor:pointer;display:flex;align-items:center;gap:.75rem;}
-    .nav-logo-img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid var(--border-mid);}
-    .hero-logo{width:90px;height:90px;border-radius:50%;object-fit:cover;border:2px solid var(--blood);margin-bottom:1.5rem;display:block;}
-    .nav-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
-    .nav-links a{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash-dim);transition:color .15s;cursor:pointer;}
-    .nav-links a:hover{color:var(--blood);}
-    .page{display:none;min-height:100vh;}
-    .page.active{display:block;}
-    #page-home.active{display:flex;flex-direction:column;}
-    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;position:relative;border-bottom:1px solid var(--border);}
-    .hero-stamp{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.35em;color:var(--muted);text-transform:uppercase;margin-bottom:2rem;display:flex;justify-content:space-between;width:100%;max-width:900px;}
-    .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,15vw,13rem);letter-spacing:.05em;color:var(--ash);line-height:.88;margin-bottom:1.5rem;}
-    .hero-title span{color:var(--blood);}
-    .hero-tagline{font-family:'Special Elite',monospace;font-size:clamp(.9rem,2.5vw,1.3rem);letter-spacing:.4em;text-transform:uppercase;color:var(--ash);margin:1.5rem 0 1rem;}
-    .hero-sub{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:clamp(.9rem,1.6vw,1.1rem);color:var(--ash-dim);max-width:520px;margin:0 auto 2.5rem;line-height:1.8;}
-    .hero-ctas{display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center;}
-    .hero-cta{display:inline-block;font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);border:1px solid var(--blood);padding:.85rem 2.5rem;cursor:pointer;transition:background .15s;background:transparent;}
-    .hero-cta:hover{background:var(--blood);}a.hero-cta{color:var(--ash);}
-    .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;}
-    .hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--blood),transparent);}
-    .hero-scroll-label{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.25em;color:var(--muted);text-transform:uppercase;}
-    .archive-wrap{padding:6rem 2rem;max-width:900px;margin:0 auto;}
-    .featured-wrap{padding:3.25rem 2rem 2.5rem;max-width:900px;margin:0 auto;width:100%;}
-    .featured-wrap .section-label{margin-bottom:1.25rem;}
-    .featured-entry{cursor:pointer;}
-    .featured-entry::before{height:100%;}
-    .section-label{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--blood);margin-bottom:.5rem;}
-    .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:.06em;color:var(--ash);line-height:1;margin-bottom:.5rem;}
-    .section-sub{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:1rem;color:var(--ash-dim);margin-bottom:1rem;}
-    .archive-hubs{display:flex;flex-wrap:wrap;gap:.85rem 1.75rem;margin:0 0 2rem;}
-    .archive-hubs a{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash-dim);border-bottom:1px solid var(--blood);padding-bottom:.15rem;transition:color .15s;}
-    .archive-hubs a:hover{color:var(--blood);}
-    .archive-badge{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;color:var(--blood);text-transform:uppercase;border:1px solid var(--border-mid);display:inline-block;padding:.3rem .75rem;margin-bottom:3rem;}
-    .archive-list{display:flex;flex-direction:column;}
-    .archive-entry{border-top:1px solid var(--border);padding:1.75rem 0;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start;position:relative;}
-    .archive-entry:last-child{border-bottom:1px solid var(--border);}
-    .archive-entry::before{content:'';position:absolute;left:-2rem;top:0;width:3px;height:0;background:var(--blood);transition:height .25s ease;}
-    .archive-entry:hover::before{height:100%;}
-    .entry-meta{display:flex;align-items:center;gap:.75rem;margin-bottom:.4rem;flex-wrap:wrap;}
-    .entry-num{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.25em;color:var(--blood);text-transform:uppercase;}
-    .entry-cat{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;border:1px solid var(--border);padding:.1rem .5rem;}
-    .entry-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem);letter-spacing:.04em;color:var(--ash);line-height:1.1;margin-bottom:.4rem;transition:color .15s;}
-    .archive-entry:hover .entry-title{color:#ddd8d0;}
-    .entry-hook{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:.95rem;color:var(--ash-dim);line-height:1.5;}
-    .entry-action{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;padding-top:.2rem;min-width:170px;}
-    .entry-btn{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);background:transparent;border:1px solid var(--blood);padding:.7rem 1.15rem;min-height:44px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;white-space:nowrap;transition:background .15s;}
-    .entry-btn:hover{background:var(--blood);}a.entry-btn{color:var(--ash);}
-    .entry-ref{font-family:'Special Elite',monospace;font-size:8px;letter-spacing:.1em;color:#2a2a2a;text-transform:uppercase;}
-    .archive-footer{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-    .archive-footer-note{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;}
-    .archive-footer-tag{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:.85rem;color:var(--muted);}
-    .about-wrap{padding:6rem 2rem;max-width:900px;margin:0 auto;}
-    .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:5rem;align-items:start;margin-top:3rem;}
-    .about-quote{border-left:3px solid var(--blood);padding-left:2rem;}
-    .about-quote blockquote{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:.04em;color:var(--ash);}
-    .about-quote blockquote span{color:var(--blood);}
-    .about-attr{margin-top:1.5rem;padding-left:2rem;font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;}
-    .about-blocks{display:flex;flex-direction:column;gap:2rem;}
-    .about-block-label{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.25em;color:var(--blood);text-transform:uppercase;margin-bottom:.5rem;}
-    .about-block-text{font-family:'Crimson Pro',Georgia,serif;font-size:1rem;color:var(--ash);line-height:1.8;}
-    .newsletter-section{background:#0e0e0e;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:7rem 2rem;text-align:center;}
-    .newsletter-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,6vw,5rem);letter-spacing:.06em;color:var(--ash);margin-bottom:.75rem;}
-    .newsletter-sub{font-family:'Special Elite',monospace;font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:.75rem;}
-    .newsletter-hook{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:1.15rem;color:var(--ash);max-width:540px;margin:0 auto .75rem;line-height:1.6;}
-    .newsletter-body{font-family:'Crimson Pro',Georgia,serif;font-size:1rem;color:var(--ash-dim);max-width:540px;margin:0 auto 2.5rem;line-height:1.7;}
-    .article-newsletter-hook{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:1.05rem;color:var(--ash);margin:0 auto .6rem;line-height:1.6;}
-    .article-newsletter-body{font-family:'Crimson Pro',Georgia,serif;font-size:.95rem;color:var(--ash-dim);margin:0 auto 1.5rem;line-height:1.7;}
-    .newsletter-form{display:flex;max-width:480px;margin:0 auto;}
-    .newsletter-input{flex:1;background:var(--black);border:1px solid var(--border-mid);border-right:none;color:var(--ash);font-family:'Crimson Pro',Georgia,serif;font-size:1rem;padding:.85rem 1.25rem;outline:none;transition:border-color .15s;}
-    .newsletter-input:focus{border-color:var(--blood);}
-    .newsletter-input::placeholder{color:var(--muted);}
-    .newsletter-btn{background:var(--blood);border:1px solid var(--blood);color:var(--ash);font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:.85rem 1.5rem;cursor:pointer;white-space:nowrap;transition:background .15s;}
-    .newsletter-btn:hover{background:var(--blood-h);}
-    .newsletter-note{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-top:1rem;}
-    .preferred-source-slot{display:flex;justify-content:center;margin-top:1rem;}
-    .social-links .preferred-source-slot{margin-top:0;flex-shrink:0;min-width:120px;min-height:32px;}
-    footer{background:var(--black);border-top:2px solid var(--blood);padding:4rem 2rem 2.5rem;}
-    .footer-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:2.5rem;}
-    .footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:2rem;}
-    .footer-brand-name{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.1em;color:var(--ash);line-height:1;}
-    .footer-brand-tag{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;margin-top:.3rem;}
-    .footer-nav{display:flex;gap:2rem;flex-wrap:wrap;list-style:none;}
-    .footer-nav a{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:color .15s;cursor:pointer;}
-    .footer-nav a:hover{color:var(--blood);}
-    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-    .footer-copy{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;}
-    .footer-sign{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:.85rem;color:var(--muted);}
-    .social-links{display:flex;gap:1.25rem;align-items:center;}
-    .social-link{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);transition:color .15s;display:inline-flex;align-items:center;gap:.4rem;}
-    .social-link:hover{color:var(--blood);}
-    .social-link svg{width:14px;height:14px;fill:currentColor;flex-shrink:0;}
-    #page-article{padding-top:80px;}
-    .article-wrap{max-width:720px;margin:0 auto;padding:4rem 2rem 6rem;}
-    .article-back{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;margin-bottom:3rem;transition:color .15s;background:none;border:none;padding:0;}
-    .article-back:hover{color:var(--blood);}
-    .article-meta{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap;}
-    .article-num{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.25em;color:var(--blood);text-transform:uppercase;}
-    .article-cat{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;border:1px solid var(--border);padding:.1rem .5rem;}
-    .article-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,6vw,4rem);letter-spacing:.04em;color:var(--ash);line-height:1;margin-bottom:2rem;}
-    .article-body{font-family:'Crimson Pro',Georgia,serif;font-size:1.15rem;line-height:1.85;color:var(--ash);}
-    .article-body p{margin-bottom:1.4rem;}
-    .article-part{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.06em;color:var(--ash);margin:3rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);}
-    .article-part-label{color:var(--blood);margin-right:.5rem;}
-    .article-newsletter{margin-top:4rem;padding:2.5rem;background:var(--surface);border:1px solid var(--border);text-align:center;}
-    .article-newsletter-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.08em;color:var(--ash);margin-bottom:.5rem;}
-    .article-newsletter-sub{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:1.5rem;}
-
-    .youtube-section{padding:6rem 2rem;max-width:900px;margin:0 auto;}
-    .youtube-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:2.5rem 0;border:1px solid var(--border);}
-    .youtube-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
-    .youtube-subscribe{display:inline-block;font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);background:var(--blood);border:1px solid var(--blood);padding:.85rem 2.5rem;cursor:pointer;transition:background .15s;text-decoration:none;}
-    .youtube-subscribe:hover{background:var(--blood-h);}
-    .youtube-meta{display:flex;align-items:center;gap:1rem;margin-bottom:.5rem;flex-wrap:wrap;}
-
-
-    /* Popup */
-    .popup-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:10000;display:none;align-items:center;justify-content:center;padding:1.5rem;}
-    .popup-overlay.active{display:flex;}
-    .popup-box{background:var(--surface);border:1px solid var(--blood);max-width:480px;width:100%;padding:3rem 2.5rem;position:relative;animation:fadeUp .4s ease;}
-    .popup-close{position:absolute;top:1rem;right:1.25rem;background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer;font-family:'Special Elite',monospace;letter-spacing:.1em;transition:color .15s;}
-    .popup-close:hover{color:var(--blood);}
-    .popup-label{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--blood);margin-bottom:.75rem;}
-    .popup-title{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:.06em;color:var(--ash);line-height:1;margin-bottom:.75rem;}
-    .popup-sub{font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:1rem;color:var(--ash-dim);margin-bottom:2rem;line-height:1.6;}
-    @media(max-width:480px){.popup-box{padding:2rem 1.5rem;}.popup-title{font-size:2rem;}}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
-    .fade-in{animation:fadeUp .6s ease forwards;}
-    @media(max-width:600px){
-      nav{padding:1rem 1.25rem;flex-wrap:wrap;row-gap:.5rem;}.nav-links{gap:.55rem .75rem;flex-wrap:wrap;justify-content:flex-end;}
-      .hero{padding:7rem 1.25rem 4rem;}.hero-stamp{flex-direction:column;gap:.25rem;align-items:center;}
-      .archive-wrap,.about-wrap{padding:4rem 1.25rem;}
-      .featured-wrap{padding:2.25rem 1.25rem;}
-      .archive-entry{grid-template-columns:1fr;gap:1rem;}.archive-entry::before{display:none;}
-      .entry-action{flex-direction:row;align-items:center;justify-content:space-between;min-width:unset;}
-      .newsletter-form{flex-direction:column;}.newsletter-input{border-right:1px solid var(--border-mid);border-bottom:none;}
-      .article-wrap{padding:3rem 1.25rem 5rem;}
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Special+Elite&amp;family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/assets/home/hero-boisjoly-memo-1985.png" imagesrcset="/assets/home/hero-boisjoly-memo-1985-sm.png 550w, /assets/home/hero-boisjoly-memo-1985.png 1100w" imagesizes="(max-width:700px) 72vw, 430px" />
+  <link rel="stylesheet" href="/assets/home/home.css" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -375,364 +223,145 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<nav>
-  <a class="nav-logo" href="/" onclick="showHome();return false;"><img src="logo.jpg" alt="Lies or Liars" class="nav-logo-img" width="32" height="32" /></a>
-  <ul class="nav-links">
-    <li><a href="/" onclick="showHome();return false;">Home</a></li>
-    <li><a href="#archive" onclick="scrollToArchive();return false;">Archive</a></li>
-    <li><a href="#episodes" onclick="scrollToEpisodes();return false;">Watch</a></li>
-    <li><a href="#about" onclick="scrollToAbout();return false;">About</a></li>
-    <li><a href="#newsletter" onclick="scrollToNewsletter();return false;">Newsletter</a></li>
-    <li><a href="/arrest.html">Arcade</a></li>
-    <li><a href="/faq.html">FAQ</a></li>
-  </ul>
-</nav>
+<header class="nav">
+  <a class="nav-logo" href="/"><img src="/logo.jpg" alt="Lies or Liars" width="36" height="36"></a>
+  <nav aria-label="Main"><ul class="nav-links"><li><a href="/">Home</a></li><li><a href="#archive">Archive</a></li><li><a href="#episodes">Watch</a></li><li><a href="#about">About</a></li><li><a href="#newsletter">Newsletter</a></li><li><a href="/arrest.html">Arcade</a></li><li><a href="/faq.html">FAQ</a></li></ul></nav>
+  <a class="nav-cta" href="#episodes">Watch the latest</a>
+  <button type="button" class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
+</header>
+<div class="drawer" id="drawer" hidden><ul><li><a href="/">Home</a></li><li><a href="#archive">Archive</a></li><li><a href="#episodes">Watch</a></li><li><a href="#about">About</a></li><li><a href="#newsletter">Newsletter</a></li><li><a href="/arrest.html">Arcade</a></li><li><a href="/faq.html">FAQ</a></li></ul><a class="btn btn-primary" href="#episodes">Watch the latest</a></div>
 
 <!-- HOME PAGE -->
-<div id="page-home" class="page active">
-  <section class="hero" id="main">
-    <img src="logo.jpg" alt="Lies or Liars" class="hero-logo" width="90" height="90" />
-    <div class="hero-stamp">
-      <span>Est. MMXXIV. In The Archives.</span>
-      <span>Sourced. Documented. Cold truth.</span>
-    </div>
-    <h1 class="hero-title">LIES<br><span>OR</span><br>LIARS</h1>
-    <hr class="red-rule-thick" style="max-width:900px;width:100%;" />
-    <div class="hero-tagline">In The Archives</div>
-    <p class="hero-sub">Every investigation starts with the official record.<br>What the document says is what we report.</p>
-    <div class="hero-ctas">
-      <button type="button" class="hero-cta" onclick="scrollToArchive()">Open The Archives</button>
-      <a class="hero-cta" href="#newsletter" onclick="scrollToNewsletter();return false;">Join The Archives</a>
-    </div>
-    <div class="hero-scroll">
-      <div class="hero-scroll-line"></div>
-      <span class="hero-scroll-label">Scroll</span>
-    </div>
-  </section>
-
-  <hr class="red-rule" />
-
-  <div class="featured-wrap" id="featured">
-    <div class="section-label">— Current Cover-Up File —</div>
-    <div class="archive-list">
-      <div class="archive-entry featured-entry" onclick="showArticle('shipman')">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 024</span><span class="entry-cat">Serial Killers</span></div>
-        <div class="entry-title">The Doctor Signed Their Death Certificates</div>
-        <div class="entry-hook">The Shipman Inquiry found that Harold Shipman killed 215 of his patients and certified all but 3 of those deaths himself. Police closed a confidential investigation into the deaths on 17 April 1998, and he killed 3 more patients before his arrest.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/shipman.html" onclick="event.preventDefault();showArticle('shipman');">Read The File →</a><span class="entry-ref">Ref: LOL-024-ARCH</span></div>
-      </div>
+<main id="page-home" class="page active">
+<section class="hero" id="main">
+  <div class="hero-kicker"><span>In the archives</span><span class="dot"></span><span>Sourced. Documented. Cold truth.</span></div>
+  <h1 class="hero-title" aria-label="Lies or Liars"><span>LIES</span> <span class="or">OR</span> <span>LIARS</span></h1>
+  <figure class="hero-doc">
+    <img src="/assets/home/hero-boisjoly-memo-1985.png" srcset="/assets/home/hero-boisjoly-memo-1985-sm.png 550w, /assets/home/hero-boisjoly-memo-1985.png 1100w" sizes="(max-width:700px) 72vw, 430px" width="1100" height="1308" fetchpriority="high" alt="Real document: Morton Thiokol memo by R. M. Boisjoly, 31 July 1985, warning that an O-ring failure would be a catastrophe of the highest order, loss of human life.">
+    <figcaption class="glass"><span class="tag">Real document · crop</span>R. M. Boisjoly memo, 31 July 1985. Rogers Commission Report, Vol. I, p. 249.<span class="cap-long"> Highlight ours.</span></figcaption>
+  </figure>
+  <div class="hero-left">
+    <p class="hero-tag">People and institutions that lie. Corporate fraud, cons, public figures, true crime and cover-ups. All from the <em>primary record</em>.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#episodes">▶ Watch the latest</a>
+      <a class="btn btn-ghost" href="#archive">Open the archive</a>
     </div>
   </div>
+  <div class="hero-right">
+    <a class="glass now" href="#episodes">
+      <span class="now-thumb"><img src="/assets/home/challenger-yt-thumb.jpg" alt="" width="1280" height="720"><span class="now-play">▶</span></span>
+      <span class="now-text"><span class="label">Latest video<span class="now-date"> · 19 Oct 2026</span></span>
+      <span class="now-title">Challenger: The O-Ring Warning the Night Before</span>
+      <span class="now-sub">The engineers' warning the night before the launch, from the Rogers Commission record.</span>
+      <span class="now-link">Watch now →</span></span>
+    </a>
+  </div>
+</section>
 
-  <section class="newsletter-section" id="newsletter">
-    <h2 class="newsletter-title">Join The Archives</h2>
-    <p class="newsletter-sub">US government corruption</p>
-    <p class="newsletter-hook">The FBI approved 2370 covert actions against Americans.</p>
-    <p class="newsletter-body">The truth they do not put on a press release. It is not on the site. It is not on X. It is the first file on this list.</p>
-    <div style="width:100%;max-width:580px;margin:0 auto;padding:0 1rem;" role="region" aria-label="Newsletter signup"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
-    <p class="newsletter-note">Add this archive as a preferred source in Google Search.</p>
+<section class="latest" id="episodes">
+  <div class="sec-head"><span class="label">Latest video</span><h2>Challenger: The O-Ring Warning the Night Before</h2>
+  <p class="sec-sub">Documentary. Built only from the primary record.</p></div>
+  <div class="latest-grid">
+    <div class="embed" id="yt" data-yt="tkmqx8C1Lho" data-title="Challenger: The O-Ring Warning the Night Before"><button type="button" class="yt-facade" aria-label="Play: Challenger: The O-Ring Warning the Night Before" onclick="playYT()"><img src="/assets/home/challenger-yt-thumb.jpg" alt="" width="1280" height="720" loading="lazy"><span class="yt-play">▶</span></button><noscript><iframe src="https://www.youtube-nocookie.com/embed/tkmqx8C1Lho" title="Challenger: The O-Ring Warning the Night Before" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></noscript></div>
+    <aside class="latest-side">
+      <p class="latest-desc">27 January 1986. Thiokol engineers recommended no launch below 53 degrees. The next morning Challenger launched at 36 degrees, and all seven crew died 73 seconds later.</p>
+      <ul class="facts"><li><span>Source</span>Rogers Commission Report, 1986</li><li><span>Case file</span>File 021: NASA Knew And Launched Anyway</li><li><span>Released</span>19 Oct 2026</li></ul>
+      <div class="latest-actions"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=tkmqx8C1Lho" target="_blank" rel="noopener">Watch on YouTube</a><a class="btn btn-ghost" href="/files/challenger.html">Read the case file</a></div>
+    </aside>
+  </div>
+</section>
+
+<section class="archive" id="archive">
+  <div class="sec-head row"><div><span class="label">Case files</span><h2>The Archive</h2><p class="sec-sub"><span class="files-count">24 Files Open</span>. Primary sources. No speculation. No filler.</p></div>
+  <div class="hubs" role="navigation" aria-label="Archive topics"><a href="/files/corruption.html">Government corruption</a><a href="/files/true-crime.html">True crime</a></div></div>
+  <h3 class="sub-label"><span class="label">On the page</span> Files with the real document shown</h3>
+  <div class="grid grid-docs">
+<a class="card has-doc" href="/files/epstein.html" data-file="epstein"><figure class="card-media doc"><img src="/assets/home/docs/epstein-npa-p5.jpg" alt="Crop of the real document: 2007 Non-Prosecution Agreement, p. 5 (court exhibit, Doc 313-24)" loading="lazy"></figure><div class="card-strip"><span class="tag">Real doc · crop</span><span>2007 Non-Prosecution Agreement, p. 5 (court exhibit, Doc 313-24)</span></div><div class="card-body"><div class="card-meta"><span>File 001</span><span>Government &amp; Corruption</span></div><h3>The Epstein Files: How the System Protected a Predator</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card has-doc" href="/files/mkUltra.html" data-file="mkUltra"><figure class="card-media doc"><img src="/assets/home/docs/mkultra-ig-1963.jpg" alt="Crop of the real document: CIA Inspector General, Report of Inspection of MKULTRA, 26 July 1963" loading="lazy"></figure><div class="card-strip"><span class="tag">Real doc · crop</span><span>CIA Inspector General, Report of Inspection of MKULTRA, 26 July 1963</span></div><div class="card-body"><div class="card-meta"><span>File 002</span><span>Government &amp; Corruption</span></div><h3>MK Ultra: The CIA's Mind Control Program</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card has-doc" href="/files/ciaTorture.html" data-file="ciaTorture"><figure class="card-media doc"><img src="/assets/home/docs/ciatorture-ssci-findings.jpg" alt="Crop of the real document: Senate Intelligence Committee, S. Rept. 113-288, Findings, p. xi" loading="lazy"></figure><div class="card-strip"><span class="tag">Real doc · crop</span><span>Senate Intelligence Committee, S. Rept. 113-288, Findings, p. xi</span></div><div class="card-body"><div class="card-meta"><span>File 019</span><span>Government &amp; Corruption</span></div><h3>The CIA Tortured And Lied</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card has-doc" href="/files/horizon.html" data-file="horizon"><figure class="card-media doc"><img src="/assets/home/docs/horizon-inquiry-vol1-p8.jpg" alt="Crop of the real document: Post Office Horizon IT Inquiry Report, Vol. 1 (HC 1119), para 1.4" loading="lazy"></figure><div class="card-strip"><span class="tag">Real doc · crop</span><span>Post Office Horizon IT Inquiry Report, Vol. 1 (HC 1119), para 1.4. OGL v3.0</span></div><div class="card-body"><div class="card-meta"><span>File 020</span><span>Government &amp; Corruption</span></div><h3>The Post Office Knew And Prosecuted Anyway</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card has-doc" href="/files/challenger.html" data-file="challenger"><figure class="card-media doc"><img src="/assets/home/docs/challenger-thompson-memo.jpg" alt="Crop of the real document: Thiokol memo, 22 Aug 1985. Rogers Commission Report Vol. I, p. 251" loading="lazy"></figure><div class="card-strip"><span class="tag">Real doc · crop</span><span>Thiokol memo, 22 Aug 1985. Rogers Commission Report Vol. I, p. 251</span></div><div class="card-body"><div class="card-meta"><span>File 021</span><span>Government &amp; Corruption</span></div><h3>NASA Knew And Launched Anyway</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card has-doc" href="/files/boeingMax.html" data-file="boeingMax"><figure class="card-media doc"><img src="/assets/home/docs/boeing-house-ti-p107.jpg" alt="Crop of the real document: House Transportation Committee, Final Report on the 737 MAX, p. 107" loading="lazy"></figure><div class="card-strip"><span class="tag">Real doc · crop</span><span>House Transportation Committee, Final Report on the 737 MAX, p. 107</span></div><div class="card-body"><div class="card-meta"><span>File 023</span><span>Corporate Crime</span></div><h3>Boeing Knew And Certified Anyway</h3><span class="card-cta">Read the file →</span></div></a>
+  </div>
+  <h3 class="sub-label"><span class="label">More files</span> The other 18 files, in file order</h3>
+  <div class="grid grid-ch">
+<a class="card" href="/files/iran.html" data-file="iran"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 003</span><span class="ch-q">What did the revolution promise?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 003</span><span>Government &amp; Corruption</span></div><h3>The Iranian Revolution: How Paradise Became Prison</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/radium.html" data-file="radium"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 004</span><span class="ch-q">What did the company know?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 004</span><span>Corporate Crime</span></div><h3>The Radium Girls: How America Poisoned Its Workers and Called It Progress</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/nestle.html" data-file="nestle"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 005</span><span class="ch-q">What did the warnings say?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 005</span><span>Corporate Crime</span></div><h3>The Milk That Killed</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/surrogacy.html" data-file="surrogacy"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 006</span><span class="ch-q">Who regulates the agencies?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 006</span><span>Corporate Crime</span></div><h3>The Womb Brokers</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/kidney.html" data-file="kidney"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 007</span><span class="ch-q">Where did the kidneys come from?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 007</span><span>Organised Crime</span></div><h3>The Brooklyn Rabbi's Kidney Ring</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/anthill.html" data-file="anthill"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 008</span><span class="ch-q">Who was in control?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 008</span><span>Cults &amp; Control</span></div><h3>The Ant Hill Kids</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/landlady.html" data-file="landlady"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 009</span><span class="ch-q">Why did the agents keep leaving?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 009</span><span>Cults &amp; Control</span></div><h3>The Landlady</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/cole.html" data-file="cole"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 010</span><span class="ch-q">Who signed the discharge?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 010</span><span>Serial Killers</span></div><h3>They Gave Him a Girl's Name. He Spent 30 Years Making Women Pay For It.</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/candyman.html" data-file="candyman"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 011</span><span class="ch-q">Why were the files closed?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 011</span><span>Serial Killers</span></div><h3>The Candy Man</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/axeman.html" data-file="axeman"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 012</span><span class="ch-q">Who wrote the letter?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 012</span><span>Unsolved</span></div><h3>The Axeman of New Orleans</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/zodiac.html" data-file="zodiac"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 013</span><span class="ch-q">What did the cipher say?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 013</span><span>Unsolved</span></div><h3>The Zodiac Killer</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/nelson.html" data-file="nelson"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 014</span><span class="ch-q">How was he caught?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 014</span><span>Serial Killers</span></div><h3>The Gorilla Man: Earle Nelson</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/gunness.html" data-file="gunness"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 015</span><span class="ch-q">Where did the men go?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 015</span><span>Serial Killers</span></div><h3>Belle Gunness: The Black Widow of the Prairie</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/sangcom.html" data-file="sangcom"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 016</span><span class="ch-q">Who authorised the arrangements?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 016</span><span>Government &amp; Corruption</span></div><h3>The UK Government Knew About the Bribes</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/infectedBlood.html" data-file="infectedBlood"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 017</span><span class="ch-q">Could it have been avoided?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 017</span><span>Government &amp; Corruption</span></div><h3>The UK Government Knew The Blood Was Infected</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/tuskegee.html" data-file="tuskegee"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 018</span><span class="ch-q">Why was penicillin withheld?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 018</span><span>Government &amp; Corruption</span></div><h3>The US Government Knew And Did Not Treat</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/nassar.html" data-file="nassar"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 022</span><span class="ch-q">What did the FBI do with the report?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 022</span><span>Government &amp; Corruption</span></div><h3>The FBI Knew And Did Not Act</h3><span class="card-cta">Read the file →</span></div></a>
+<a class="card" href="/files/shipman.html" data-file="shipman"><div class="card-media chapter" aria-hidden="true"><span class="ch-kick">Case 024</span><span class="ch-q">Who checked the certificates?</span><span class="ch-rule"></span></div><div class="card-body"><div class="card-meta"><span>File 024</span><span>Serial Killers</span></div><h3>The Doctor Signed Their Death Certificates</h3><span class="card-cta">Read the file →</span></div></a>
+  </div>
+</section>
+
+<section class="follow" id="follow">
+  <div class="sec-head"><span class="label">Follow the record</span><h2>Four places. One standard.</h2></div>
+  <div class="follow-grid">
+    <a class="f-card" href="https://www.youtube.com/@liesorliars" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><b>YouTube</b><span>@liesorliars · full documentaries</span></a>
+    <a class="f-card" href="https://x.com/liesorliars" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.2 2.3h3.3l-7.2 8.3 8.5 11.2h-6.7l-5.2-6.8-6 6.8H1.6l7.7-8.8L1.2 2.3H8l4.7 6.2 5.5-6.2zm-1.1 17.5h1.8L7.1 4.1h-2l12 15.7z"/></svg><b>X</b><span>@liesorliars · daily receipts</span></a>
+    <a class="f-card" href="https://www.instagram.com/liesorliar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><b>Instagram</b><span>@liesorliar · Reels</span></a>
+    <a class="f-card" href="https://rumble.com/user/LiesOrLiars" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10-6.5z"/></svg><b>Rumble</b><span>LiesOrLiars · full documentaries</span></a>
+  </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <div class="nl-inner glass-solid">
+    <span class="label">Newsletter</span><h2>Join The Archives</h2>
+    <p>New case files by email, built from the source documents. No spam. Unsubscribe any time.</p>
+    <div class="nl-form" role="region" aria-label="Newsletter signup"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
+    <p class="nl-note">Add this archive as a preferred source in Google Search.</p>
     <div class="preferred-source-slot"><div google-add-preferred-source-btn data-theme="dark" data-lang="en"></div></div>
-    <p class="newsletter-note">Unsubscribe at any time</p>
-  </section>
+  </div>
+</section>
 
-  <div class="archive-wrap" id="archive">
-    <div class="section-label">— Case Files —</div>
-    <h2 class="section-title">The Archive</h2>
-    <p class="section-sub">Primary sources. No speculation. No filler.</p>
-    <div class="archive-hubs" role="navigation" aria-label="Archive topics">
-      <a href="/files/corruption.html">Government corruption case files</a>
-      <a href="/files/true-crime.html">True crime case files</a>
-    </div>
-    <div class="archive-badge">24 Files Open — Updated 2026</div>
-    <div class="archive-list">
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 001</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">The Epstein Files: How the System Protected a Predator</div>
-        <div class="entry-hook">Federal prosecutors had a 53-page indictment, 30 victims, and overwhelming evidence. They gave him 18 months in county jail with work release.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/epstein.html" onclick="event.preventDefault();showArticle('epstein');">Read The File →</a><span class="entry-ref">Ref: LOL-001-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 002</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">MK Ultra: The CIA's Mind Control Program</div>
-        <div class="entry-hook">For 20 years the CIA experimented on unwitting citizens — prisoners, mental patients, ordinary people. Then they destroyed the evidence. Nobody went to jail.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/mkUltra.html" onclick="event.preventDefault();showArticle('mkUltra');">Read The File →</a><span class="entry-ref">Ref: LOL-002-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 003</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">The Iranian Revolution: How Paradise Became Prison</div>
-        <div class="entry-hook">In 1979 millions marched for freedom. They got a theocracy. Forty-seven years later their descendants are still marching for the same things.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/iran.html" onclick="event.preventDefault();showArticle('iran');">Read The File →</a><span class="entry-ref">Ref: LOL-003-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 004</span><span class="entry-cat">Corporate Crime</span></div>
-        <div class="entry-title">The Radium Girls: How America Poisoned Its Workers and Called It Progress</div>
-        <div class="entry-hook">The company had internal studies proving radium was lethal. They buried the reports. Over 100 died. No executive was ever charged.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/radium.html" onclick="event.preventDefault();showArticle('radium');">Read The File →</a><span class="entry-ref">Ref: LOL-004-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 005</span><span class="entry-cat">Corporate Crime</span></div>
-        <div class="entry-title">The Milk That Killed</div>
-        <div class="entry-hook">Nestlé knew formula mixed with contaminated water killed infants. They calculated the cost of harm against the cost of profit. They sold it anyway.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/nestle.html" onclick="event.preventDefault();showArticle('nestle');">Read The File →</a><span class="entry-ref">Ref: LOL-005-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 006</span><span class="entry-cat">Corporate Crime</span></div>
-        <div class="entry-title">The Womb Brokers</div>
-        <div class="entry-hook">There is no federal law governing surrogacy agencies in the United States. No licensing. No oversight. No minimum standard of care. Anyone can open one tomorrow.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/surrogacy.html" onclick="event.preventDefault();showArticle('surrogacy');">Read The File →</a><span class="entry-ref">Ref: LOL-006-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 007</span><span class="entry-cat">Organised Crime</span></div>
-        <div class="entry-title">The Brooklyn Rabbi's Kidney Ring</div>
-        <div class="entry-hook">He told his neighbours he was in construction. For a decade he brokered black market kidney sales — flying donors from Israel, keeping the spread between $10,000 and $160,000.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/kidney.html" onclick="event.preventDefault();showArticle('kidney');">Read The File →</a><span class="entry-ref">Ref: LOL-007-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 008</span><span class="entry-cat">Cults &amp; Control</span></div>
-        <div class="entry-title">The Ant Hill Kids</div>
-        <div class="entry-hook">He told them the world was ending in February 1979. He told them he was the only way out. He was wrong about the world. He was right about everything else he could control.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/anthill.html" onclick="event.preventDefault();showArticle('anthill');">Read The File →</a><span class="entry-ref">Ref: LOL-008-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 009</span><span class="entry-cat">Cults &amp; Control</span></div>
-        <div class="entry-title">The Landlady</div>
-        <div class="entry-hook">She had a prior conviction for drugging elderly victims. Parole agents visited her boarding house repeatedly. They kept leaving. Seven bodies were in the yard.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/landlady.html" onclick="event.preventDefault();showArticle('landlady');">Read The File →</a><span class="entry-ref">Ref: LOL-009-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 010</span><span class="entry-cat">Serial Killers</span></div>
-        <div class="entry-title">They Gave Him a Girl's Name. He Spent 30 Years Making Women Pay For It.</div>
-        <div class="entry-hook">At 22 Carroll Cole walked into a police station and told an officer he fantasised about strangling women. A doctor later wrote in his file that he must kill women before he could be intimate with them. Both signed his discharge. Then they opened the door.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/cole.html" onclick="event.preventDefault();showArticle('cole');">Read The File →</a><span class="entry-ref">Ref: LOL-010-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 011</span><span class="entry-cat">Serial Killers</span></div>
-        <div class="entry-title">The Candy Man</div>
-        <div class="entry-hook">He gave free sweets to the neighbourhood children. He let them use the pool table in the back room of his factory. Between 1970 and 1973 he murdered at least 28 of them. Families reported their sons missing for months. The police called them runaways and closed the files.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/candyman.html" onclick="event.preventDefault();showArticle('candyman');">Read The File →</a><span class="entry-ref">Ref: LOL-011-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 012</span><span class="entry-cat">Unsolved</span></div>
-        <div class="entry-title">The Axeman of New Orleans</div>
-        <div class="entry-hook">In 1919 a serial killer sent a letter to every newspaper in New Orleans. He said he would spare any home playing jazz at midnight on a specific night. The city played until dawn. He kept his word. He was never identified.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/axeman.html" onclick="event.preventDefault();showArticle('axeman');">Read The File →</a><span class="entry-ref">Ref: LOL-012-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 013</span><span class="entry-cat">Unsolved</span></div>
-        <div class="entry-title">The Zodiac Killer</div>
-        <div class="entry-hook">He sent coded letters to newspapers daring police to break them. One cipher went unsolved for 51 years. He killed at least 5 people across San Francisco in 1968 and 1969. He was never identified. The file is still open.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/zodiac.html" onclick="event.preventDefault();showArticle('zodiac');">Read The File →</a><span class="entry-ref">Ref: LOL-013-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 014</span><span class="entry-cat">Serial Killers</span></div>
-        <div class="entry-title">The Gorilla Man: Earle Nelson</div>
-        <div class="entry-hook">He carried a Bible. He dressed neatly. He knocked on doors and asked for a room. In 18 months he killed 22 boarding house landladies across the United States and Canada. He was caught because he tried to sell a stolen watch for 50 cents.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/nelson.html" onclick="event.preventDefault();showArticle('nelson');">Read The File →</a><span class="entry-ref">Ref: LOL-014-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 015</span><span class="entry-cat">Serial Killers</span></div>
-        <div class="entry-title">Belle Gunness: The Black Widow of the Prairie</div>
-        <div class="entry-hook">She placed lonely hearts advertisements in newspapers across America. Widow seeks good man. Must bring funds. The men who answered her ads travelled to a remote Indiana farm. At least 14 were never seen again. When the farmhouse burned down she disappeared too. Nobody knows if she died in the fire or walked away.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/gunness.html" onclick="event.preventDefault();showArticle('gunness');">Read The File →</a><span class="entry-ref">Ref: LOL-015-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 016</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">The UK Government Knew About the Bribes</div>
-        <div class="entry-hook">GPT pleaded guilty to corruption on the SANGCOM contracts. Two men were later cleared after the jury heard evidence that Britain had authorised the arrangements.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/sangcom.html" onclick="event.preventDefault();showArticle('sangcom');">Read The File →</a><span class="entry-ref">Ref: LOL-016-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 017</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">The UK Government Knew The Blood Was Infected</div>
-        <div class="entry-hook">More than 3000 deaths are attributable to infected NHS blood and blood products. Sir Brian Langstaff found the calamity could largely have been avoided.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/infectedBlood.html" onclick="event.preventDefault();showArticle('infectedBlood');">Read The File →</a><span class="entry-ref">Ref: LOL-017-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 018</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">The US Government Knew And Did Not Treat</div>
-        <div class="entry-hook">For 40 years the United States Public Health Service studied untreated syphilis in Black men in Macon County, Alabama. The Ad Hoc Advisory Panel found the study ethically unjustified in 1932 and said penicillin should have been given when it became generally available.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/tuskegee.html" onclick="event.preventDefault();showArticle('tuskegee');">Read The File →</a><span class="entry-ref">Ref: LOL-018-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 019</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">The CIA Tortured And Lied</div>
-        <div class="entry-hook">The Senate Select Committee on Intelligence found the CIA detained at least 119 people in its Detention and Interrogation Program. At least 26 were wrongfully held.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/ciaTorture.html" onclick="event.preventDefault();showArticle('ciaTorture');">Read The File →</a><span class="entry-ref">Ref: LOL-019-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 020</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">The Post Office Knew And Prosecuted Anyway</div>
-        <div class="entry-hook">Sir Wyn Williams found that senior Post Office employees knew or should have known Legacy Horizon was capable of error. Throughout its lifetime the Post Office maintained the fiction that its data was always accurate.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/horizon.html" onclick="event.preventDefault();showArticle('horizon');">Read The File →</a><span class="entry-ref">Ref: LOL-020-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 021</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">NASA Knew And Launched Anyway</div>
-        <div class="entry-hook">Morton Thiokol engineers recommended no launch of Challenger below 53 degrees Fahrenheit on the night of 27 January 1986. Managers reversed them, NASA launched at 36 degrees the next morning, and all seven crew members died 73 seconds after liftoff.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/challenger.html" onclick="event.preventDefault();showArticle('challenger');">Read The File →</a><span class="entry-ref">Ref: LOL-021-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 022</span><span class="entry-cat">Government &amp; Corruption</span></div>
-        <div class="entry-title">The FBI Knew And Did Not Act</div>
-        <div class="entry-hook">USA Gymnastics reported sexual assault allegations against Lawrence Gerard Nassar to the FBI Indianapolis Field Office in July 2015. The Department of Justice Office of the Inspector General found that senior officials there failed to respond with the urgency required, never transferred the case as claimed, and later made false statements about what they had done.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/nassar.html" onclick="event.preventDefault();showArticle('nassar');">Read The File →</a><span class="entry-ref">Ref: LOL-022-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 023</span><span class="entry-cat">Corporate Crime</span></div>
-        <div class="entry-title">Boeing Knew And Certified Anyway</div>
-        <div class="entry-hook">Boeing designed the Maneuvering Characteristics Augmentation System to take input from a single angle of attack sensor, kept MCAS out of the pilot Flight Crew Operations Manual, and made Level B differences training a design objective so 737 MAX pilots would not need a simulator. Two crashes killed 346 people.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/boeingMax.html" onclick="event.preventDefault();showArticle('boeingMax');">Read The File →</a><span class="entry-ref">Ref: LOL-023-ARCH</span></div>
-      </div>
-
-      <div class="archive-entry">
-        <div><div class="entry-meta"><span class="entry-num">Case File: 024</span><span class="entry-cat">Serial Killers</span></div>
-        <div class="entry-title">The Doctor Signed Their Death Certificates</div>
-        <div class="entry-hook">The Shipman Inquiry found that Harold Shipman killed 215 of his patients and certified all but 3 of those deaths himself. Police closed a confidential investigation into the deaths on 17 April 1998, and he killed 3 more patients before his arrest.</div></div>
-        <div class="entry-action"><a class="entry-btn" href="/files/shipman.html" onclick="event.preventDefault();showArticle('shipman');">Read The File →</a><span class="entry-ref">Ref: LOL-024-ARCH</span></div>
-      </div>
-
-    </div>
-    <div class="archive-footer">
-      <span class="archive-footer-note">The record never closes.</span>
-      <span class="archive-footer-tag">Court documents. Police files. Cold truth.</span>
+<section class="about" id="about">
+  <div class="about-grid">
+    <blockquote>The document <span>speaks</span> for itself.</blockquote>
+    <div class="about-cols">
+      <div><span class="label">The record</span><p>Every case is built on primary documents: court filings, inquiry reports, transcripts and declassified files. No second-hand accounts.</p></div>
+      <div><span class="label">The method</span><p>We start with what was officially recorded and read it closely: sworn testimony, findings and the gaps between them.</p></div>
+      <div><span class="label">The standard</span><p>If it cannot be sourced to a filed record, it does not appear here. Findings are reported as the official body made them.</p></div>
     </div>
   </div>
-
-
-  <hr class="red-rule" />
-
-  <div class="youtube-section" id="episodes">
-    <div class="section-label">— Animated Episodes —</div>
-    <h2 class="section-title">The Archive. Animated.</h2>
-    <p class="section-sub">True crime documented and brought to life. Primary sources. Graphic novel style.</p>
-
-    <div class="youtube-embed">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/tkmqx8C1Lho"
-        title="Challenger: The O-Ring Warning the Night Before — Lies or Liars"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-top:1.5rem;">
-      <div>
-        <div style="font-family:'Special Elite',monospace;font-size:10px;letter-spacing:.25em;color:var(--blood);text-transform:uppercase;margin-bottom:.4rem;">Now Playing</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.04em;color:var(--ash);line-height:1.1;">Challenger: The O-Ring Warning the Night Before</div>
-        <div style="font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-size:.95rem;color:var(--ash-dim);margin-top:.3rem;">27 January 1986. Thiokol engineers warned against launching below 53 degrees. The next morning Challenger launched at 36 degrees, and all 7 crew died 73 seconds later.</div>
-      </div>
-      <a href="https://www.youtube.com/@liesorliars" target="_blank" rel="noopener" class="youtube-subscribe">Subscribe on YouTube →</a>
-    </div>
-  </div>
-
-  <hr class="red-rule" />
-
-  <div class="about-wrap" id="about">
-    <div class="section-label">— About —</div>
-    <h2 class="section-title">The Mission</h2>
-    <div class="about-grid">
-      <div>
-        <div class="about-quote">
-          <blockquote>Everyone<br>is lying.<br><span>We find out</span><br>who.</blockquote>
-        </div>
-        <div class="about-attr">— Lies or Liars, Archive Division</div>
-      </div>
-      <div class="about-blocks">
-        <div><div class="about-block-label">The Record</div><p class="about-block-text">Every case in these archives is built on primary documents. Court transcripts. Affidavits. Evidence logs. Police reports obtained through public record requests. No paraphrasing. No second-hand accounts. The document speaks for itself.</p></div>
-        <hr class="red-rule" />
-        <div><div class="about-block-label">The Method</div><p class="about-block-text">Each file begins with what was officially recorded and moves toward what the record reveals on close reading. Inconsistencies in sworn testimony. Omissions in chain-of-custody logs. The gap between what was said under oath and what was physically documented.</p></div>
-        <hr class="red-rule" />
-        <div><div class="about-block-label">The Standard</div><p class="about-block-text">No speculation without documentation. No conclusions without citations. If it cannot be sourced to a filed record, it does not appear here. This is not a podcast. It is not an opinion. It is an archive.</p></div>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div><div class="footer-brand-name">Lies or Liars</div><div class="footer-brand-tag">In The Archives</div></div>
-        <ul class="footer-nav">
-          <li><a href="#archive" onclick="scrollToArchive();return false;">Archive</a></li>
-          <li><a href="#about" onclick="scrollToAbout();return false;">About</a></li>
-          <li><a href="#newsletter" onclick="scrollToNewsletter();return false;">Newsletter</a></li>
-          <li><a href="/arrest.html">Arcade</a></li>
-          <li><a href="/faq.html">FAQ</a></li>
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/terms.html">Terms</a></li>
-        </ul>
-      </div>
-      <hr class="red-rule" />
-      <div class="footer-bottom">
-        <span class="footer-copy">© 2026 Lies or Liars. All rights reserved.</span>
-        <div class="social-links">
-          <a href="https://x.com/Liesorliars" target="_blank" rel="noopener" class="social-link">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            X
-          </a>
-          <a href="https://www.youtube.com/@liesorliars" target="_blank" rel="noopener" class="social-link">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            YouTube
-          </a>
-          <div class="preferred-source-slot"><div google-add-preferred-source-btn data-theme="dark" data-lang="en"></div></div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</div>
+</section>
+</main>
 
 <!-- ARTICLE PAGE -->
 <div id="page-article" class="page">
-  <div class="article-wrap fade-in">
-    <button class="article-back" onclick="showHome()">← Back to Archive</button>
+  <article class="article-wrap fade-in">
+    <button type="button" class="article-back" onclick="goHome('#archive',true)">← Back to Archive</button>
     <div class="article-meta" id="article-meta"></div>
     <h1 class="article-title" id="article-title"></h1>
-    <hr class="red-rule" style="margin-bottom:2.5rem;" />
+    <hr class="red-rule" />
     <div class="article-body" id="article-body"></div>
     <div class="article-newsletter">
       <div class="article-newsletter-title">Stay In The Archive</div>
       <p class="article-newsletter-hook">The FBI approved 2370 covert actions against Americans.</p>
       <p class="article-newsletter-body">The next corruption file does not go on the site. It goes here.</p>
-      <div style="width:100%;max-width:580px;margin:0 auto;padding:0 1rem;" role="region" aria-label="Newsletter signup"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
+      <div class="nl-form" role="region" aria-label="Newsletter signup"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
     </div>
-  </div>
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div><div class="footer-brand-name">Lies or Liars</div><div class="footer-brand-tag">In The Archives</div></div>
-        <ul class="footer-nav"><li><a href="/" onclick="showHome();return false;">Home</a></li><li><a href="#archive" onclick="showHome();setTimeout(scrollToArchive,300);return false;">Archive</a></li><li><a href="/arrest.html">Arcade</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li></ul>
-      </div>
-      <hr class="red-rule" />
-      <div class="footer-bottom">
-        <span class="footer-copy">© 2026 Lies or Liars. All rights reserved.</span>
-        <span class="footer-sign">The record exists. We find it.</span>
-      </div>
-    </div>
-  </footer>
+  </article>
 </div>
+
+<footer class="footer">
+  <div class="foot-top"><div><div class="foot-brand">Lies or Liars</div><div class="foot-tag">In The Archives</div></div>
+  <ul class="foot-nav"><li><a href="#archive">Archive</a></li><li><a href="#about">About</a></li><li><a href="#newsletter">Newsletter</a></li><li><a href="/arrest.html">Arcade</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li></ul></div>
+  <p class="foot-credit">Horizon Inquiry document crop (File 020): Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence v3.0</a>.</p>
+  <div class="foot-bottom"><span>© 2026 Lies or Liars. Documents shown come from the public record and are credited where they appear.</span>
+  <div class="foot-social"><a href="https://www.youtube.com/@liesorliars" target="_blank" rel="noopener">YouTube</a><a href="https://x.com/Liesorliars" target="_blank" rel="noopener">X</a><a href="https://www.instagram.com/liesorliar/" target="_blank" rel="noopener">Instagram</a><a href="https://rumble.com/user/LiesOrLiars" target="_blank" rel="noopener">Rumble</a><div class="preferred-source-slot"><div google-add-preferred-source-btn data-theme="dark" data-lang="en"></div></div></div></div>
+</footer>
 
 <script>
 const A={
@@ -991,12 +620,14 @@ shipman:{num:'Case File: 024',cat:'Serial Killers',title:'The Doctor Signed Thei
 
 };
 
+const HOME_TITLE=document.title;
+function isArticle(){return document.getElementById('page-article').classList.contains('active');}
 function showHome(){
   document.getElementById('page-home').classList.add('active');
   document.getElementById('page-article').classList.remove('active');
+  document.title=HOME_TITLE;
   window.scrollTo(0,0);
 }
-
 function showArticle(id){
   const d=A[id];if(!d)return;
   document.getElementById('article-meta').innerHTML=`<span class="article-num">${d.num}</span><span class="article-cat">${d.cat}</span>`;
@@ -1009,9 +640,22 @@ function showArticle(id){
   document.getElementById('article-body').innerHTML=html;
   document.getElementById('page-home').classList.remove('active');
   document.getElementById('page-article').classList.add('active');
+  document.title=d.title+' | Lies or Liars';
   window.scrollTo(0,0);
 }
-
+function scrollToId(id){const e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth'});}
+function openFile(id,push){
+  if(!A[id])return;
+  if(push)history.pushState({file:id},'','/?file='+encodeURIComponent(id));
+  showArticle(id);
+}
+function goHome(hash,push){
+  const wasArticle=isArticle();
+  if(push||(wasArticle&&location.search))history.pushState(null,'','/'+(hash||''));
+  if(wasArticle)showHome();
+  const id=(hash||'').replace(/^#/,'');
+  if(id)setTimeout(()=>scrollToId(id),wasArticle?60:0);else if(!wasArticle)window.scrollTo({top:0,behavior:'smooth'});
+}
 function fileIdFromLocation(){
   const q=new URLSearchParams(window.location.search).get('file');
   if(q&&A[q])return q;
@@ -1021,15 +665,43 @@ function fileIdFromLocation(){
 }
 function openFileFromLocation(){
   const id=fileIdFromLocation();
-  if(id)showArticle(id);
+  if(id){showArticle(id);return;}
+  if(isArticle()){showHome();const h=(location.hash||'').replace(/^#/,'');if(h)setTimeout(()=>scrollToId(h),60);}
 }
 openFileFromLocation();
 window.addEventListener('hashchange',openFileFromLocation);
+window.addEventListener('popstate',openFileFromLocation);
 
-function scrollToEpisodes(){showHome();setTimeout(()=>{const e=document.getElementById('episodes');if(e)e.scrollIntoView({behavior:'smooth'});},100);}
-function scrollToArchive(){showHome();setTimeout(()=>{const e=document.getElementById('archive');if(e)e.scrollIntoView({behavior:'smooth'});},100);}
-function scrollToAbout(){showHome();setTimeout(()=>{const e=document.getElementById('about');if(e)e.scrollIntoView({behavior:'smooth'});},100);}
-function scrollToNewsletter(){showHome();setTimeout(()=>{const e=document.getElementById('newsletter');if(e)e.scrollIntoView({behavior:'smooth'});},100);}
+// kept for compatibility with the previous homepage
+function scrollToEpisodes(){goHome('#episodes');}
+function scrollToArchive(){goHome('#archive');}
+function scrollToAbout(){goHome('#about');}
+function scrollToNewsletter(){goHome('#newsletter');}
+
+// card clicks open the reader; in-page anchors return home first when a file is open
+document.addEventListener('click',function(e){
+  const a=e.target.closest('a');
+  if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+  const f=a.getAttribute('data-file');
+  if(f&&A[f]){e.preventDefault();openFile(f,true);return;}
+  const href=a.getAttribute('href')||'';
+  if(href==='/'){e.preventDefault();goHome('',isArticle());return;}
+  if(href.length>1&&href.charAt(0)==='#'&&isArticle()&&!a.classList.contains('skip-link')){e.preventDefault();goHome(href,true);}
+});
+
+function playYT(){
+  const box=document.getElementById('yt');
+  const id=box.getAttribute('data-yt'),t=box.getAttribute('data-title');
+  const f=document.createElement('iframe');
+  f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1';
+  f.title=t;
+  f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+  f.setAttribute('allowfullscreen','');
+  box.innerHTML='';box.appendChild(f);
+}
+function closeDrawer(){const b=document.querySelector('.burger'),d=document.getElementById('drawer');d.hidden=true;b.classList.remove('open');b.setAttribute('aria-expanded','false');}
+function toggleMenu(b){const d=document.getElementById('drawer');const o=d.hidden;d.hidden=!o;b.setAttribute('aria-expanded',String(o));b.classList.toggle('open',o);}
+document.querySelectorAll('#drawer a').forEach(a=>a.addEventListener('click',closeDrawer));
 </script>
 
 <!-- EMAIL POPUP -->
