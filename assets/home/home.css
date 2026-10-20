@@ -109,6 +109,26 @@ section{max-width:1240px;margin:0 auto;padding:96px 40px}
 .card-media.doc img{width:100%;height:100%;object-fit:cover;object-position:top left;filter:sepia(.12) contrast(1.05);transition:transform .3s}
 .card:hover .card-media.doc img{transform:scale(1.03)}
 .card-media.doc figcaption{position:absolute;left:0;right:0;bottom:0;background:var(--glass);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:8px 10px;font-size:13px;line-height:1.35;color:var(--ash);border-top:1px solid var(--blood)}
+.card-media.face{background:#000}
+.card-media.face .face-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.card:hover .card-media.face .face-img{transform:scale(1.03)}
+/* evidence frame: thin crimson rule inset + corner brackets, drawn in the margin around the photo */
+.card-media.face::before{content:"";position:absolute;inset:8px;z-index:1;pointer-events:none;border:1px solid rgba(231,76,60,.35)}
+.card-media.face::after{content:"";position:absolute;inset:4px;z-index:1;pointer-events:none;--c:var(--crimson);--l:22px;--t:2px;
+  background:linear-gradient(var(--c),var(--c)) top left/var(--l) var(--t),linear-gradient(var(--c),var(--c)) top left/var(--t) var(--l),
+  linear-gradient(var(--c),var(--c)) top right/var(--l) var(--t),linear-gradient(var(--c),var(--c)) top right/var(--t) var(--l),
+  linear-gradient(var(--c),var(--c)) bottom left/var(--l) var(--t),linear-gradient(var(--c),var(--c)) bottom left/var(--t) var(--l),
+  linear-gradient(var(--c),var(--c)) bottom right/var(--l) var(--t),linear-gradient(var(--c),var(--c)) bottom right/var(--t) var(--l);background-repeat:no-repeat}
+.face-mark{position:absolute;top:14px;left:16px;z-index:2;font-family:var(--f-display);font-size:15px;letter-spacing:.14em;line-height:1;color:var(--bone);background:rgba(8,8,8,.82);padding:4px 7px 3px;border-left:2px solid var(--crimson)}
+.face-stamp{position:absolute;top:14px;right:16px;z-index:2;font-family:var(--f-type);font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1;color:var(--crimson);background:rgba(8,8,8,.82);border:1px solid var(--crimson);padding:4px 7px;transform:rotate(2deg)}
+.face-doc{position:absolute;right:18px;bottom:18px;z-index:2;width:34%;aspect-ratio:16/10;background:#ece6da;border:1px solid #0a0a0a;box-shadow:0 6px 18px rgba(0,0,0,.65);transform:rotate(-2deg)}
+.face-doc::before{content:"";position:absolute;top:-7px;left:50%;width:44%;height:13px;transform:translateX(-50%) rotate(3deg);background:rgba(122,18,18,.86);box-shadow:0 1px 3px rgba(0,0,0,.4);z-index:1}
+.face-doc img{width:100%;height:100%;object-fit:cover;object-position:top left;filter:grayscale(1) contrast(1.08);display:block}
+.face-cap{position:absolute;left:18px;bottom:18px;z-index:2;max-width:calc(66% - 46px);display:flex;flex-direction:column;gap:3px;line-height:1.15;background:var(--bone);color:#111;padding:7px 10px 7px;border-top:3px solid var(--crimson);box-shadow:0 4px 14px rgba(0,0,0,.55)}
+.face-cap b{font-family:var(--f-display);font-weight:400;font-size:21px;letter-spacing:.05em;color:#0a0a0a}
+.face-cap span{font-family:var(--f-type);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--blood)}
+.face-cap small{font-size:11px;color:#3a3a3a;border-top:1px solid rgba(0,0,0,.18);padding-top:3px;margin-top:1px}
+.foot-photos{margin-top:8px}
 .card-media.chapter{background:radial-gradient(70% 80% at 50% 50%,#121110,#050505);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:20px}
 .ch-kick{font-family:var(--f-type);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
 .ch-q{font-family:var(--f-body);font-size:26px;line-height:1.2;color:var(--bone)}
@@ -197,6 +217,15 @@ section{max-width:1240px;margin:0 auto;padding:96px 40px}
   .grid-docs .card-media.doc{aspect-ratio:4/3}
   .grid-docs .card-media.doc img{width:150%;max-width:none;height:auto;min-height:100%;object-fit:initial}
   .grid-docs .card h3{font-size:26px}
+  .grid-docs .card-media.face{aspect-ratio:4/3}
+  .card-media.face::after{--l:16px}
+  .face-mark{top:12px;left:13px;font-size:13px;padding:3px 6px 2px}
+  .face-stamp{top:12px;right:13px;font-size:11px;padding:3px 6px}
+  .face-doc{width:30%;right:13px;bottom:13px}
+  .face-cap{left:13px;bottom:13px;max-width:calc(70% - 32px);padding:5px 8px;gap:1px}
+  .face-cap b{font-size:16px}
+  .face-cap span{font-size:11px;letter-spacing:.04em}
+  .face-cap small{font-size:10.5px;padding-top:2px}
   .sub-label{flex-direction:column;gap:2px}
   .about-grid{grid-template-columns:1fr;gap:28px}
   .glass-solid{padding:32px 20px}
