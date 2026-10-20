@@ -60,7 +60,7 @@
     bar.setAttribute('aria-label', 'Cookie choice');
     bar.innerHTML =
       '<div class="cookie-inner">' +
-        '<p>Analytics run only if you accept. The archive stays readable either way. <a href="/privacy.html">Privacy</a></p>' +
+        '<p>Google Analytics runs only if you accept. Visit counts use GoatCounter, which sets no cookies and stores no personal data. The archive stays readable either way. <a href="/privacy.html">Privacy</a></p>' +
         '<div class="cookie-actions">' +
           '<button type="button" id="lol-cookie-accept">Accept</button>' +
           '<button type="button" id="lol-cookie-essential">Essential only</button>' +

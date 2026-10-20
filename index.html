@@ -623,7 +623,13 @@ shipman:{num:'Case File: 024',cat:'Serial Killers',title:'The Doctor Signed Thei
 
 const HOME_TITLE=document.title;
 function isArticle(){return document.getElementById('page-article').classList.contains('active');}
+let currentFile=null,gcLive=false;
+function gcCount(id){
+  if(!gcLive||!A[id]||!window.goatcounter||typeof window.goatcounter.count!=='function')return;
+  window.goatcounter.count({path:'/?file='+id,title:A[id].title+' | Lies or Liars'});
+}
 function showHome(){
+  currentFile=null;
   document.getElementById('page-home').classList.add('active');
   document.getElementById('page-article').classList.remove('active');
   document.title=HOME_TITLE;
@@ -643,6 +649,9 @@ function showArticle(id){
   document.getElementById('page-article').classList.add('active');
   document.title=d.title+' | Lies or Liars';
   window.scrollTo(0,0);
+  const changed=currentFile!==id;
+  currentFile=id;
+  if(changed)gcCount(id);
 }
 function scrollToId(id){const e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth'});}
 function openFile(id,push){
@@ -670,6 +679,7 @@ function openFileFromLocation(){
   if(isArticle()){showHome();const h=(location.hash||'').replace(/^#/,'');if(h)setTimeout(()=>scrollToId(h),60);}
 }
 openFileFromLocation();
+gcLive=true; // the first view, including a ?file= deep link, is counted by count.js on load
 window.addEventListener('hashchange',openFileFromLocation);
 window.addEventListener('popstate',openFileFromLocation);
 
@@ -751,5 +761,8 @@ document.getElementById('emailPopup').addEventListener('click', function(e){
 setTimeout(showPopup, 30000);
 </script>
 
+<!-- GoatCounter: cookie free visit counts. The canonical link is "/", so name reader deep links /?file=<key> -->
+<script>window.goatcounter={path:function(p){var k=typeof fileIdFromLocation==='function'?fileIdFromLocation():null;return k?'/?file='+k:p;}};</script>
+<script data-goatcounter="https://liesorliars.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
