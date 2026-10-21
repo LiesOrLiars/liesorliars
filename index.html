@@ -351,7 +351,8 @@
       <div class="article-newsletter-title">Stay In The Archive</div>
       <p class="article-newsletter-hook">The FBI approved 2370 covert actions against Americans.</p>
       <p class="article-newsletter-body">The next corruption file does not go on the site. It goes here.</p>
-      <div class="nl-form" role="region" aria-label="Newsletter signup"><script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script></div>
+      <!-- One EmailOctopus embed per page: its script binds only the first form on the page, so this slot links to #newsletter -->
+      <div class="nl-form" role="region" aria-label="Newsletter signup"><a class="btn btn-primary" href="/#newsletter" onclick="goHome('#newsletter',true);return false;">Join The Archives</a></div>
     <p class="eo-note" style="font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.06em;color:var(--muted,#8a8a8a);text-align:center;margin:.75rem auto 0;max-width:580px;padding:0 1rem;">Case files by email. Unsubscribe any time. <a href="/privacy.html" style="color:inherit;text-decoration:underline;">Privacy</a></p>
     </div>
   </article>
@@ -727,8 +728,9 @@ document.querySelectorAll('#drawer a').forEach(a=>a.addEventListener('click',clo
     <div class="popup-label">The Archive</div>
     <div class="popup-title">Stay In The Archive</div>
     <p class="popup-sub">The FBI approved 2370 covert actions against Americans. They ran it in secret. The Senate put it in the record. That file is not on the site. It is not on X. It is the first file on this list.</p>
+    <!-- One EmailOctopus embed per page: its script binds only the first form on the page, so this button goes to #newsletter -->
     <div style="margin-top:1rem;" id="popupEoForm" role="region" aria-label="Newsletter signup">
-      <script async src="https://eocampaign1.com/form/8f1e63a8-3dd4-11f1-a37c-cb978097f39d.js" data-form="8f1e63a8-3dd4-11f1-a37c-cb978097f39d"></script>
+      <a class="btn btn-primary" href="/#newsletter" onclick="closePopup();goHome('#newsletter',true);return false;">Join The Archives</a>
     </div>
     <p class="eo-note" style="font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.06em;color:var(--muted,#8a8a8a);text-align:center;margin:.75rem auto 0;max-width:580px;padding:0 1rem;padding:0;">Case files by email. Unsubscribe any time. <a href="/privacy.html" style="color:inherit;text-decoration:underline;">Privacy</a></p>
   </div>
