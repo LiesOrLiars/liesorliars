@@ -280,3 +280,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--bone);outline-offse
 @media (max-width:860px){.article-wrap{padding:3rem 1.25rem 5rem}.article-newsletter{padding:2rem 1.25rem}}
 @media (max-width:480px){.popup-box{padding:2rem 1.5rem}.popup-title{font-size:2rem}.nl-form{padding:0}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none !important;transition:none !important}}
+
+/* Hide EmailOctopus form badge (form still loads and submits) */
+[eo-block="powered-by"] { display: none !important; }
